@@ -4,7 +4,7 @@
  *
  * - Gnani Prisma → speech-to-text
  * - Gnani Timbre → text-to-speech
- * - LLM (Claude) → tool-calling helper
+ * - LLM → tool-calling helper
  *
  * LIVE implementation now lives in voiceService.ts + server/src/routes/voice.ts.
  * These interfaces are kept for reference only.

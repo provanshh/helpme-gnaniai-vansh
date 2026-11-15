@@ -43,7 +43,7 @@ Also provide a donor side (register, get alerted, accept) and a hospital side (b
 | Places data (later) | OpenStreetMap Overpass API | Cached on the backend. NOW: sample data only |
 | Voice: speech to text | Gnani Prisma | Via backend proxy only |
 | Voice: text to speech | Gnani Timbre | Via backend proxy only. Web Speech API fallback in dev |
-| AI helper brain | An LLM with tool calling (Claude API) | Tools: findBlood, findPlaces, requestAmbulance, sendAlert, switchLanguage |
+| AI helper brain | An LLM with tool calling | Tools: findBlood, findPlaces, requestAmbulance, sendAlert, switchLanguage |
 | Languages | react-i18next | English + Hindi first; then more Indic languages |
 | Backend | Node.js (TypeScript) with Express or Fastify | All secrets live here |
 | Database | PostgreSQL + PostGIS | Distance and radius queries |

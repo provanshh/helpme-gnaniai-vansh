@@ -8,7 +8,6 @@ import {
   GitBranch,
   HeartPulse,
   Languages,
-  Layers,
   MessageCircle,
   Mic,
   Network,
@@ -38,7 +37,7 @@ function toEmbed(url: string): string | null {
 const DIAGRAMS: { id: string; title: string; sub: string; icon: LucideIcon; src: string }[] = [
   {
     id: 'flow',
-    title: 'Full user workflow',
+    title: 'User workflow',
     sub: 'Speak → Gnani → agent acts → Gnani speaks',
     icon: Workflow,
     src: `flowchart TD
@@ -72,7 +71,7 @@ const DIAGRAMS: { id: string; title: string; sub: string; icon: LucideIcon; src:
   },
   {
     id: 'gnani',
-    title: 'Gnani voice round trip',
+    title: 'Gnani round trip',
     sub: '1 Prisma call + 1 Timbre call per request',
     icon: AudioLines,
     src: `sequenceDiagram
@@ -99,7 +98,7 @@ const DIAGRAMS: { id: string; title: string; sub: string; icon: LucideIcon; src:
   },
   {
     id: 'arch',
-    title: 'System architecture',
+    title: 'Architecture',
     sub: 'React · Express proxy · Gnani · OSM',
     icon: Network,
     src: `flowchart LR
@@ -140,7 +139,7 @@ const DIAGRAMS: { id: string; title: string; sub: string; icon: LucideIcon; src:
   },
   {
     id: 'agent',
-    title: 'SOS agent engine',
+    title: 'Agent engine',
     sub: 'Act first, ask later',
     icon: Brain,
     src: `flowchart LR
@@ -157,7 +156,7 @@ const DIAGRAMS: { id: string; title: string; sub: string; icon: LucideIcon; src:
   },
   {
     id: 'wa',
-    title: 'WhatsApp donor flow',
+    title: 'WhatsApp flow',
     sub: 'Accept · start code · live location',
     icon: MessageCircle,
     src: `sequenceDiagram
@@ -231,7 +230,7 @@ function DiagramModal({ d, onClose }: { d: (typeof DIAGRAMS)[number] | null; onC
             <div className="flex items-center gap-3 border-b border-border bg-primary px-6 py-4 text-white">
               <d.icon className="size-6 text-accent" />
               <div className="min-w-0 flex-1">
-                <h3 className="font-display text-xl font-bold">{d.title}</h3>
+                <h3 className="font-[family-name:var(--font-display)] text-xl font-semibold">{d.title}</h3>
                 <p className="text-[13px] text-white/70">{d.sub}</p>
               </div>
               <button
@@ -291,12 +290,7 @@ function Card({ className = '', children }: { className?: string; children: Reac
 }
 
 function Eyebrow({ children, light }: { children: React.ReactNode; light?: boolean }) {
-  return (
-    <p className={`mb-2 flex items-center gap-2 text-[11px] font-bold tracking-[0.14em] uppercase ${light ? 'text-accent' : 'text-primary'}`}>
-      <span className="h-[3px] w-5 rounded-full bg-accent" />
-      {children}
-    </p>
-  );
+  return <span className={`eyebrow mb-2.5 ${light ? '!text-white' : ''}`}>{children}</span>;
 }
 
 function GithubMark() {
@@ -325,9 +319,9 @@ export function EvaluationPage() {
           <HeartPulse className="size-6" />
         </div>
         <div className="min-w-0 flex-1">
-          <h1 className="font-display text-xl leading-tight font-bold xl:text-2xl">
+          <h1 className="font-[family-name:var(--font-display)] text-xl leading-tight font-semibold xl:text-2xl">
             HelpMe <span className="font-normal text-white/60">·</span>{' '}
-            <span className="text-accent italic">Evaluation</span>
+            <span className="text-highlight">Evaluation</span>
           </h1>
           <p className="truncate text-[12px] text-white/70 xl:text-[13px]">
             Emergency medical help for India, one sentence away · Gnani AI Great Indian AI Internship Challenge
@@ -384,7 +378,7 @@ export function EvaluationPage() {
                 <div className="absolute inset-0 grid place-items-center bg-[radial-gradient(circle_at_30%_20%,#3b5e45,#1f3626)] text-center text-white">
                   <div>
                     <CirclePlay className="mx-auto size-14 text-accent" />
-                    <p className="mt-2 font-display text-lg font-bold">3-minute explainer</p>
+                    <p className="mt-2 font-[family-name:var(--font-display)] text-lg font-semibold">3-minute explainer</p>
                     <p className="text-[13px] text-white/70">Video link coming soon</p>
                   </div>
                 </div>
@@ -392,13 +386,13 @@ export function EvaluationPage() {
             </div>
           </Card>
           <Card className="flex flex-1 flex-col !bg-primary-dark text-white">
-            <Eyebrow light>Impact: why it matters</Eyebrow>
-            <div className="grid min-h-0 flex-1 grid-cols-2 gap-2.5 [@media(max-height:820px)]:grid-cols-4 [@media(max-height:820px)]:gap-2">
+            <Eyebrow light>Impact</Eyebrow>
+            <div className="grid min-h-0 flex-1 grid-cols-2 gap-2.5 [@media(max-height:920px)]:grid-cols-4 [@media(max-height:920px)]:gap-2">
               {IMPACT.map((s) => (
-                <div key={s.n} className="flex flex-col justify-center rounded-2xl bg-white/8 px-3.5 py-2.5 [@media(max-height:820px)]:px-2.5">
-                  <p className="font-display text-2xl leading-none font-bold text-accent xl:text-[28px] [@media(max-height:820px)]:text-xl">{s.n}</p>
-                  <p className="mt-1.5 text-[12.5px] leading-snug text-white/90 [@media(max-height:820px)]:text-[11px]">{s.l}</p>
-                  <p className="mt-1 text-[10.5px] text-white/50 [@media(max-height:820px)]:hidden">{s.s}</p>
+                <div key={s.n} className="flex flex-col justify-center rounded-2xl bg-white/8 px-3.5 py-2.5 [@media(max-height:920px)]:px-2.5">
+                  <p className="font-[family-name:var(--font-display)] text-2xl leading-none font-semibold text-accent xl:text-[28px] [@media(max-height:920px)]:text-xl">{s.n}</p>
+                  <p className="mt-1.5 text-[12.5px] leading-snug text-white/90 [@media(max-height:920px)]:text-[11px]">{s.l}</p>
+                  <p className="mt-1 text-[10.5px] text-white/50 [@media(max-height:920px)]:hidden">{s.s}</p>
                 </div>
               ))}
             </div>
@@ -408,22 +402,22 @@ export function EvaluationPage() {
         {/* about */}
         <Card className="flex flex-col overflow-hidden lg:col-span-3">
           <Eyebrow>What is HelpMe</Eyebrow>
-          <p className="text-[14px] leading-relaxed text-text-muted xl:text-[15px] [@media(max-height:820px)]:text-[12.5px] [@media(max-height:820px)]:leading-snug">
+          <p className="text-[14px] leading-relaxed text-text-muted xl:text-[15px] [@media(max-height:920px)]:text-[12.5px] [@media(max-height:920px)]:leading-snug">
             A <b className="text-text">voice-first emergency agent</b> for India. Say one sentence in{' '}
             <b className="text-text">Hindi, English or Hinglish</b>: it finds care, dispatches help and talks back.
           </p>
-          <p className="mt-2 rounded-xl bg-accent-soft px-3 py-2 text-[12.5px] font-semibold text-text [@media(max-height:820px)]:mt-1.5 [@media(max-height:820px)]:py-1.5 [@media(max-height:820px)]:text-[11.5px]">
+          <p className="mt-2 rounded-xl bg-accent-soft px-3 py-2 text-[12.5px] font-semibold text-text [@media(max-height:920px)]:mt-1.5 [@media(max-height:920px)]:py-1.5 [@media(max-height:920px)]:text-[11.5px]">
             No typing · no reading · no confirmation loops
           </p>
-          <ul className="mt-3 flex min-h-0 flex-1 flex-col gap-2 [@media(max-height:820px)]:mt-2 [@media(max-height:820px)]:gap-1.5">
+          <ul className="mt-3 flex min-h-0 flex-1 flex-col gap-2 [@media(max-height:920px)]:mt-2 [@media(max-height:920px)]:gap-1.5">
             {ABOUT.map((a) => (
               <li key={a.t} className="flex min-h-0 flex-1 items-center gap-3 rounded-2xl border border-border bg-surface-low px-3 py-2">
-                <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-primary-soft text-primary [@media(max-height:820px)]:size-7">
+                <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-primary-soft text-primary [@media(max-height:920px)]:size-7">
                   <a.icon className="size-[18px]" />
                 </span>
                 <span className="leading-snug">
-                  <b className="block text-[14px] text-text [@media(max-height:820px)]:text-[12.5px]">{a.t}</b>
-                  <span className="block text-[12.5px] text-text-secondary [@media(max-height:820px)]:text-[11px] [@media(max-height:820px)]:leading-tight">{a.d}</span>
+                  <b className="block text-[14px] text-text [@media(max-height:920px)]:text-[12.5px]">{a.t}</b>
+                  <span className="block text-[12.5px] text-text-secondary [@media(max-height:920px)]:text-[11px] [@media(max-height:920px)]:leading-tight">{a.d}</span>
                 </span>
               </li>
             ))}
@@ -445,7 +439,7 @@ export function EvaluationPage() {
                     className={`flex h-full flex-1 flex-col rounded-2xl p-2.5 ${s.g ? 'bg-primary text-white ring-2 ring-accent' : 'bg-accent-soft text-text'}`}
                   >
                     <s.icon className={`size-5 ${s.g ? 'text-accent' : 'text-accent-dark'}`} />
-                    <p className="mt-1 font-display text-[14px] leading-tight font-bold">{s.g ? `Gnani ${s.t}` : s.t}</p>
+                    <p className="mt-1 font-[family-name:var(--font-display)] text-[14px] leading-tight font-semibold">{s.g ? `Gnani ${s.t}` : s.t}</p>
                     <p className={`mt-0.5 text-[11.5px] leading-snug ${s.g ? 'text-white/75' : 'text-text-secondary'}`}>{s.d}</p>
                   </div>
                   {i < 2 && <ArrowRight className="size-4 shrink-0 text-outline" />}
@@ -455,7 +449,7 @@ export function EvaluationPage() {
             <p className="mt-3 rounded-xl bg-primary-dark px-3 py-2 text-center text-[13.5px] font-bold text-accent">
               Every voice request = 1 Prisma call + 1 Timbre call
             </p>
-            <ul className="mt-3 grid grid-cols-2 gap-x-3 gap-y-1.5 [@media(max-height:820px)]:hidden">
+            <ul className="mt-3 grid grid-cols-2 gap-x-3 gap-y-1.5 [@media(max-height:920px)]:hidden">
               {GNANI_USES.map((u) => (
                 <li key={u} className="flex gap-1.5 text-[12.5px] leading-snug text-text-muted">
                   <span className="mt-1 size-1.5 shrink-0 rounded-full bg-accent" /> {u}
@@ -473,22 +467,22 @@ export function EvaluationPage() {
           </Card>
 
           <Card className="flex flex-1 flex-col">
-            <Eyebrow>Workflow & architecture: tap to open</Eyebrow>
-            <div className="grid min-h-0 flex-1 auto-rows-fr gap-2 [@media(max-height:820px)]:grid-cols-2 [@media(max-height:820px)]:gap-1.5">
+            <Eyebrow>Workflows · tap to open</Eyebrow>
+            <div className="flex min-h-0 flex-1 flex-col justify-between gap-2 [@media(max-height:920px)]:grid [@media(max-height:920px)]:grid-cols-2 [@media(max-height:920px)]:content-start [@media(max-height:920px)]:gap-2">
               {DIAGRAMS.map((d) => (
                 <button
                   key={d.id}
                   onClick={() => setOpen(d)}
-                  className="group flex min-h-0 items-center gap-3 [@media(max-height:820px)]:gap-2 rounded-2xl border border-border bg-surface-low px-3 text-left transition hover:-translate-y-0.5 hover:border-accent hover:bg-accent-soft"
+                  className="group flex h-12 shrink-0 items-center gap-3 rounded-2xl border border-border bg-surface-low pr-3 pl-1.5 text-left transition hover:-translate-y-0.5 hover:border-accent hover:bg-accent-soft [@media(max-height:920px)]:h-10 [@media(max-height:920px)]:gap-2 [@media(max-height:920px)]:pl-1"
                 >
-                  <span className="grid size-8 shrink-0 place-items-center rounded-xl bg-primary text-accent">
+                  <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-primary text-accent [@media(max-height:920px)]:size-8">
                     <d.icon className="size-4" />
                   </span>
                   <span className="min-w-0 flex-1">
-                    <b className="line-clamp-2 block text-[14px] leading-tight text-text [@media(max-height:820px)]:text-[12px]">{d.title}</b>
-                    <span className="block truncate text-[12px] text-text-secondary [@media(max-height:820px)]:hidden">{d.sub}</span>
+                    <b className="block truncate text-[14px] leading-tight font-semibold text-text [@media(max-height:920px)]:text-[13px]">{d.title}</b>
+                    <span className="block truncate text-[12px] leading-tight text-text-secondary [@media(max-height:920px)]:hidden">{d.sub}</span>
                   </span>
-                  <ArrowRight className="size-4 shrink-0 text-outline transition group-hover:translate-x-0.5 group-hover:text-accent-dark [@media(max-height:820px)]:hidden" />
+                  <ArrowRight className="size-4 shrink-0 text-outline transition group-hover:translate-x-0.5 group-hover:text-accent-dark [@media(max-height:920px)]:hidden" />
                 </button>
               ))}
             </div>
@@ -497,16 +491,14 @@ export function EvaluationPage() {
 
         {/* bottom strip */}
         <div className="flex flex-wrap items-center gap-2 rounded-3xl border border-border bg-surface px-4 py-2.5 lg:col-span-12">
-          <span className="flex items-center gap-1.5 text-[11px] font-bold tracking-wider text-primary uppercase">
-            <Layers className="size-4" /> Stack
-          </span>
+          <span className="eyebrow">Tech stack</span>
           <span className="rounded-full bg-primary px-2.5 py-1 text-[11px] font-bold text-accent">Gnani Prisma + Timbre</span>
           {STACK.map((s) => (
             <span key={s} className="rounded-full bg-surface-low px-2.5 py-1 text-[11px] font-semibold text-text-muted">
               {s}
             </span>
           ))}
-          <span className="ml-auto flex items-center gap-3 text-[11px] text-text-secondary [@media(max-height:820px)]:hidden">
+          <span className="ml-auto flex items-center gap-3 text-[11px] text-text-secondary [@media(max-height:920px)]:hidden">
             <span className="flex items-center gap-1">
               <Users className="size-3.5" /> Donors, ambulances & WhatsApp are demo simulations
             </span>
