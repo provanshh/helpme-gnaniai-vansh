@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Button, EmergencyBanner } from '@/components/ui';
+import { Button } from '@/components/ui';
 import { apiFetch } from '@/lib/api';
 import { useAppStore } from '@/store/appStore';
 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { EmergencyBanner, EmptyState, Icon } from '@/components/ui';
+import { EmptyState, Icon } from '@/components/ui';
 import { requestService } from '@/services/requestService';
 import type { SampleRequest } from '@/types/domain';
 import { cn } from '@/lib/cn';

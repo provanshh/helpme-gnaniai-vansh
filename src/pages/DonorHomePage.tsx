@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Button, EmergencyBanner, useToastStore } from '@/components/ui';
+import { Button, useToastStore } from '@/components/ui';
 import { cn } from '@/lib/cn';
 
 export function DonorHomePage() {

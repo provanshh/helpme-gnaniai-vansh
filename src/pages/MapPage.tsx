@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { EmergencyBanner, EmptyState, PlaceCard, PlaceCardSkeleton, SearchField } from '@/components/ui';
+import { EmptyState, PlaceCard, PlaceCardSkeleton, SearchField } from '@/components/ui';
 import { useAppStore } from '@/store/appStore';
 import { PageVoice } from '@/components/voice/PageVoice';
 

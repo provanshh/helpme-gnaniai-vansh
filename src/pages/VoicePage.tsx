@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Button, EmergencyBanner, Icon } from '@/components/ui';
+import { Button, Icon } from '@/components/ui';
 import { useVoiceCommand } from '@/hooks/useVoiceCommand';
 import { stopSpeaking, voiceService } from '@/services/voice/voiceService';
 import { GREETING } from '@/services/agent/agentEngine';

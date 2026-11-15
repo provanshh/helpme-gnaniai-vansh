@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { DEMO_HOSPITAL_BLOOD_STOCK } from '@/data/sample/demoHospitalStock';
 import { SAMPLE_HOSPITAL_DASHBOARD } from '@/data/sample';
-import { EmergencyBanner, Icon } from '@/components/ui';
+import { Icon } from '@/components/ui';
 import { cn } from '@/lib/cn';
 
 export function HospitalDashboardPage() {

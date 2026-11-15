@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { EmergencyBanner, Icon, LanguageToggle } from '@/components/ui';
+import { Icon, LanguageToggle } from '@/components/ui';
 
 export function ProfilePage() {
   const { t } = useTranslation();

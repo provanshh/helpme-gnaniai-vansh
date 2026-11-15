@@ -5,7 +5,6 @@ import { useTranslation } from 'react-i18next';
 import {
   BloodGroupGrid,
   Button,
-  EmergencyBanner,
   EmptyState,
   PlaceCard,
   PlaceCardSkeleton,
