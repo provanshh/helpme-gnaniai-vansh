@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-surface":"#111c29","secondary-fixed-dim":"#ffb4ac","surface-tint":"#006b5f","outline-variant":"#bcc9c5","primary":"#00685c","surface-variant":"#d8e3f5","on-tertiary-fixed-variant":"#3d4758","on-tertiary-fixed":"#121c2b","on-primary-fixed-variant":"#005047","inverse-primary":"#63dac7","error-container":"#ffdad6","inverse-on-surface":"#e9f1ff","on-background":"#111c29","tertiary-fixed":"#d9e3f7","surface-container":"#e4efff","tertiary":"#525c6e","surface":"#f8f9ff","primary-fixed-dim":"#63dac7","on-secondary-container":"#fffbff","on-error-container":"#93000a","surface-dim":"#d0dbec","surface-container-lowest":"#ffffff","on-tertiary-container":"#fefcff","outline":"#6d7a76","primary-container":"#008375","on-secondary-fixed":"#410002","surface-container-highest":"#d8e3f5","background":"#f8f9ff","on-primary":"#ffffff","on-secondary":"#ffffff","tertiary-fixed-dim":"#bdc7db","primary-fixed":"#81f6e3","secondary-fixed":"#ffdad6","on-tertiary":"#ffffff","on-primary-container":"#f4fffb","secondary-container":"#db322f","on-surface-variant":"#3d4946","surface-container-high":"#dee9fa","on-primary-fixed":"#00201c","surface-bright":"#f8f9ff","secondary":"#b7131a","error":"#ba1a1a","tertiary-container":"#6b7587","on-secondary-fixed-variant":"#93000d","inverse-surface":"#27313e","on-error":"#ffffff","surface-container-low":"#eef4ff"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"margin-tablet":"2rem","gutter-desktop":"2rem","space-xl":"2.5rem","margin":"1rem","space-md":"1rem","gutter":"1rem","space-lg":"1.5rem","margin-desktop":"3rem","gutter-tablet":"1.5rem","space-xs":"0.25rem","space-sm":"0.5rem"},fontFamily:{"headline-sm":["Inter"],"headline-md":["Inter"],"body-lg":["Noto Sans"],"caption":["Noto Sans"],"label-md":["Inter"],"label-lg":["Inter"],"body-bold":["Noto Sans"],"display-lg":["Inter"],"display-lg-mobile":["Inter"],"headline-lg-mobile":["Inter"],"body-md":["Noto Sans"],"headline-lg":["Inter"]},fontSize:{"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"caption":["13px",{"lineHeight":"18px","fontWeight":"500"}],"label-md":["14px",{"lineHeight":"20px","fontWeight":"600"}],"label-lg":["16px",{"lineHeight":"24px","fontWeight":"600"}],"body-bold":["16px",{"lineHeight":"24px","fontWeight":"600"}],"display-lg":["48px",{"lineHeight":"56px","fontWeight":"700"}],"display-lg-mobile":["32px",{"lineHeight":"40px","fontWeight":"700"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","fontWeight":"700"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"40px","fontWeight":"700"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(26,36,51,0.06)]"><div class="h-16 w-full px-gutter-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[24px]">vital_signs</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight tracking-tight">HelpMe</span><span class="font-caption text-caption text-primary tracking-wide leading-none">Emergency Medical Response</span></div></div><nav class="hidden md:flex items-center gap-space-sm bg-surface-container-low px-space-xs py-space-xs rounded-xl" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm font-semibold rounded-lg"><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md" data-path="emergency-dashboard" href="#">Home</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md" data-path="live-fleet-map" href="#">Map</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md relative" data-path="dispatch-requests" href="#">Requests<span class="ml-space-xs px-1.5 py-0.2 bg-secondary text-on-secondary rounded-full font-caption text-[11px] align-middle">3</span></a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md" data-path="responder-profile" href="#">Profile</a></nav><div class="flex items-center gap-space-sm"><div class="hidden lg:flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xs rounded-lg shadow-[0_1px_4px_-1px_rgba(26,36,51,0.04)]"><span class="relative flex h-2.5 w-2.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span></span><span class="material-symbols-outlined text-primary text-[18px]">location_on</span><span class="font-label-md text-label-md text-on-surface">Rohini, Delhi</span></div><button class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[18px] text-tertiary">language</span><span class="font-label-md text-label-md">हिं / EN</span></button><button class="flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-secondary text-on-secondary shadow-[0_8px_20px_-4px_rgba(229,57,53,0.35)] hover:bg-secondary-container transition-all active:scale-95" type="button"><span class="material-symbols-outlined text-[20px]">emergency</span><span class="font-label-lg text-label-lg tracking-wider font-bold">SOS 112</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface flex-1"><div class="flex flex-col w-full">
+<div class="w-full max-w-[1440px] mx-auto px-margin-desktop py-space-md">
+<!-- Top Meta Context Indicator -->
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-secondary-fixed text-secondary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">bloodtype</span>
+</span>
+<div class="flex items-center gap-space-xs font-label-md text-label-md text-tertiary">
+<span>Life-Critical Intake</span>
+<span>/</span>
+<span class="text-on-surface font-semibold">Blood Bank &amp; Volunteer Dispatch</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-primary/10 text-primary font-caption text-caption font-semibold">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+          Live Dispatch Network: Active (North Delhi Ward 14)
+        </span>
+</div>
+</div>
+<!-- Main Grid: 40% Left Panel (Triage / Flow), 60% Right Panel (3D Geospatial & Voice Assist) -->
+<div class="grid grid-cols-12 gap-gutter-desktop items-start">
+<!-- ================= LEFT COLUMN (~40% = 5 cols on 12-grid) ================= -->
+<section class="col-span-12 lg:col-span-5 flex flex-col gap-space-md">
+<!-- Interactive State Flow Tabs -->
+<div class="p-space-xs bg-surface-container rounded-xl flex items-center justify-between shadow-sm">
+<button class="state-tab-btn flex-1 py- space-sm px-space-xs rounded-lg text-center font-label-md text-label-md transition-all duration-200 bg-surface-container-lowest text-primary shadow-sm font-bold flex items-center justify-center gap-1" id="tab-state-1" onclick="switchState(1)" type="button">
+<span class="w-5 h-5 rounded-full bg-primary text-on-primary text-[12px] flex items-center justify-center font-bold">1</span>
+<span>Request</span>
+</button>
+<button class="state-tab-btn flex-1 py-space-sm px-space-xs rounded-lg text-center font-label-md text-label-md transition-all duration-200 text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1" id="tab-state-2" onclick="switchState(2)" type="button">
+<span class="w-5 h-5 rounded-full bg-surface-container-highest text-tertiary text-[12px] flex items-center justify-center font-bold">2</span>
+<span>Results</span>
+</button>
+<button class="state-tab-btn flex-1 py-space-sm px-space-xs rounded-lg text-center font-label-md text-label-md transition-all duration-200 text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1" id="tab-state-3" onclick="switchState(3)" type="button">
+<span class="w-5 h-5 rounded-full bg-surface-container-highest text-tertiary text-[12px] flex items-center justify-center font-bold">3</span>
+<span>Status</span>
+</button>
+</div>
+<!-- ================= STATE 1: REQUEST INTAKE ================= -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-lg" id="view-state-1">
+<div class="flex items-start justify-between">
+<div>
+<h1 class="font-headline-md text-headline-md text-on-surface">Find Blood</h1>
+<p class="font-body-md text-body-md text-tertiary mt-1">Specify verified requirement for instant donor match</p>
+</div>
+<span class="px-space-sm py-1 rounded-full bg-secondary-fixed text-secondary font-label-md text-label-md font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+              Emergency
+            </span>
+</div>
+<!-- Blood Group 8-Button Grid -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface flex justify-between items-center">
+<span>Select Blood Group</span>
+<span class="font-caption text-caption text-tertiary">Rare groups trigger broadcast</span>
+</label>
+<div class="grid grid-cols-4 gap-space-sm" id="blood-group-grid">
+<button class="bg-surface-container-low hover:bg-surface-container text-on-surface font-headline-sm text-headline-sm h-14 rounded-xl flex items-center justify-center transition-all" onclick="selectGroup(this, 'A+')" type="button">A+</button>
+<button class="bg-surface-container-low hover:bg-surface-container text-on-surface font-headline-sm text-headline-sm h-14 rounded-xl flex items-center justify-center transition-all" onclick="selectGroup(this, 'A-')" type="button">A-</button>
+<button class="bg-primary text-on-primary shadow-sm font-headline-sm text-headline-sm h-14 rounded-xl flex items-center justify-center transition-all ring-2 ring-primary ring-offset-2" onclick="selectGroup(this, 'B+')" type="button">B+</button>
+<button class="bg-surface-container-low hover:bg-surface-container text-on-surface font-headline-sm text-headline-sm h-14 rounded-xl flex items-center justify-center transition-all" onclick="selectGroup(this, 'B-')" type="button">B-</button>
+<button class="bg-surface-container-low hover:bg-surface-container text-on-surface font-headline-sm text-headline-sm h-14 rounded-xl flex items-center justify-center transition-all" onclick="selectGroup(this, 'O+')" type="button">O+</button>
+<button class="bg-surface-container-low hover:bg-surface-container text-on-surface font-headline-sm text-headline-sm h-14 rounded-xl flex items-center justify-center transition-all" onclick="selectGroup(this, 'O-')" type="button">O-</button>
+<button class="bg-surface-container-low hover:bg-surface-container text-on-surface font-headline-sm text-headline-sm h-14 rounded-xl flex items-center justify-center transition-all" onclick="selectGroup(this, 'AB+')" type="button">AB+</button>
+<button class="bg-surface-container-low hover:bg-surface-container text-on-surface font-headline-sm text-headline-sm h-14 rounded-xl flex items-center justify-center transition-all" onclick="selectGroup(this, 'AB-')" type="button">AB-</button>
+</div>
+</div>
+<!-- Units Needed Stepper -->
+<div class="flex items-center justify-between bg-surface-container-low p-space-md rounded-xl">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Units Required</span>
+<span class="font-caption text-caption text-tertiary">1 Unit ≈ 450 mL whole blood</span>
+</div>
+<div class="flex items-center gap-space-md">
+<button class="w-14 h-14 rounded-xl bg-surface-container-lowest text-on-surface shadow-sm hover:bg-surface-container flex items-center justify-center active:scale-95 transition-all text-headline-sm" onclick="adjustUnits(-1)" type="button">
+<span class="material-symbols-outlined">remove</span>
+</button>
+<span class="font-headline-md text-headline-md text-primary w-24 text-center select-none font-bold" id="units-display">2 Units</span>
+<button class="w-14 h-14 rounded-xl bg-surface-container-lowest text-on-surface shadow-sm hover:bg-surface-container flex items-center justify-center active:scale-95 transition-all text-headline-sm" onclick="adjustUnits(1)" type="button">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+<!-- Urgency Toggle -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface">Urgency Level</label>
+<div class="grid grid-cols-2 gap-space-sm">
+<button class="min-h-[56px] px-space-md rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center gap-space-xs shadow-sm font-label-lg text-label-lg font-bold ring-2 ring-secondary ring-offset-1" id="urgency-immediate" onclick="setUrgency('urgent')" type="button">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">priority_high</span>
+<span>Right now (Urgent)</span>
+</button>
+<button class="min-h-[56px] px-space-md rounded-xl bg-surface-container-low text-on-surface-variant hover:bg-surface-container flex items-center justify-center gap-space-xs font-label-lg text-label-lg transition-all" id="urgency-24h" onclick="setUrgency('24h')" type="button">
+<span class="material-symbols-outlined text-[20px]">schedule</span>
+<span>Within 24 hours</span>
+</button>
+</div>
+</div>
+<!-- Patient Location Field & GPS Trigger -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface">Patient Location / Receiving Facility</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-tertiary">location_on</span>
+<input class="w-full h-14 pl-12 pr-36 rounded-xl bg-surface-container-low text-on-surface font-body-bold text-body-bold focus:outline-none focus:ring-2 focus:ring-primary shadow-inner" id="delivery-location" type="text" value="Rohini Sector 14, Delhi"/>
+<button class="absolute right-2 px-space-sm h-10 rounded-lg bg-surface-container-lowest text-primary hover:bg-surface-container font-label-md text-label-md font-semibold flex items-center gap-1 shadow-sm transition-all" onclick="useMyLocation()" type="button">
+<span class="material-symbols-outlined text-[18px]">my_location</span>
+<span>Use GPS</span>
+</button>
+</div>
+</div>
+<!-- Full Width Primary Action -->
+<button class="w-full min-h-[56px] rounded-xl bg-primary text-on-primary font-headline-sm text-headline-sm font-bold flex items-center justify-center gap-space-sm hover:bg-primary-container shadow-md active:scale-[0.99] transition-all" onclick="switchState(2)" type="button">
+<span class="material-symbols-outlined text-[24px]">search</span>
+<span>Request Blood (Search Donors &amp; Banks)</span>
+</button>
+<!-- Reassurance Footer -->
+<div class="flex items-center justify-center gap-space-xs text-tertiary font-caption text-caption">
+<span class="material-symbols-outlined text-[16px] text-primary">security</span>
+<span>Verified through NACO &amp; State Transfusion Services Network</span>
+</div>
+</div>
+<!-- ================= STATE 2: MATCHED RESULTS ================= -->
+<div class="hidden bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md" id="view-state-2">
+<div class="flex items-start justify-between">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Available Matches</h2>
+<p class="font-body-md text-body-md text-tertiary mt-0.5">Found within 5 km of Rohini Sector 14</p>
+</div>
+<span class="px-space-sm py-1 rounded-full bg-primary/10 text-primary font-label-md text-label-md font-bold">
+              B+ Matched
+            </span>
+</div>
+<!-- Sub Tabs (Donors vs Blood Banks) -->
+<div class="flex items-center gap-space-sm bg-surface-container-low p-1 rounded-xl">
+<button class="flex-1 min-h-[44px] rounded-lg font-label-md text-label-md font-semibold bg-surface-container-lowest text-on-surface shadow-sm transition-all flex items-center justify-center gap-1.5" id="subtab-donors" onclick="toggleResultFilter('donors')" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">person_check</span>
+<span>Donors (14)</span>
+</button>
+<button class="flex-1 min-h-[44px] rounded-lg font-label-md text-label-md font-semibold text-tertiary hover:text-on-surface transition-all flex items-center justify-center gap-1.5" id="subtab-banks" onclick="toggleResultFilter('banks')" type="button">
+<span class="material-symbols-outlined text-[18px]">local_hospital</span>
+<span>Blood Banks (6)</span>
+</button>
+</div>
+<!-- Results Cards List -->
+<div class="flex flex-col gap-space-sm" id="results-card-list">
+<!-- Card 1: Rotary Blood Bank -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col gap-space-sm group">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[24px]">local_hospital</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Rotary Blood Bank</h3>
+<div class="flex items-center gap-space-xs text-tertiary font-body-md text-body-md mt-0.5">
+<span class="material-symbols-outlined text-[16px] text-primary">near_me</span>
+<span>1.8 km away • Tughlakabad Ext.</span>
+</div>
+</div>
+</div>
+<span class="px-space-sm py-1 rounded-full bg-primary/10 text-primary font-label-md text-label-md font-bold shrink-0">
+                  Available now
+                </span>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-1 rounded-lg bg-surface-container-lowest text-on-surface font-body-bold text-body-bold">
+                    B+ (4 Units Available)
+                  </span>
+<span class="font-caption text-caption text-tertiary">Component: PRBC / FFP</span>
+</div>
+<button class="min-h-[48px] px-space-lg rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg font-bold shadow-sm transition-all active:scale-95" onclick="selectResultAndTrack('Rotary Blood Bank', 'B+ (4 Units)', '1.8 km', '8 min')" type="button">
+                  Request
+                </button>
+</div>
+</div>
+<!-- Card 2: Rahul Verma (Verified Donor) -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col gap-space-sm group">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed text-secondary flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">volunteer_activism</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Rahul Verma</h3>
+<span class="material-symbols-outlined text-primary text-[18px]" title="Government ID Verified">verified</span>
+</div>
+<div class="flex items-center gap-space-xs text-tertiary font-body-md text-body-md mt-0.5">
+<span class="material-symbols-outlined text-[16px] text-primary">near_me</span>
+<span>2.4 km away • Sector 11 Rohini</span>
+</div>
+</div>
+</div>
+<span class="px-space-sm py-1 rounded-full bg-primary/10 text-primary font-label-md text-label-md font-bold shrink-0">
+                  Available now
+                </span>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-1 rounded-lg bg-surface-container-lowest text-on-surface font-body-bold text-body-bold">
+                    B+ Group • Last Donated 6m ago
+                  </span>
+</div>
+<button class="min-h-[48px] px-space-lg rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg font-bold shadow-sm transition-all active:scale-95" onclick="selectResultAndTrack('Rahul Verma', 'B+', '2.4 km', '10 min')" type="button">
+                  Request
+                </button>
+</div>
+</div>
+<!-- Card 3: AIIMS Blood Repository -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col gap-space-sm group">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest text-on-surface flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[24px]">apartment</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">AIIMS Blood Repository</h3>
+<div class="flex items-center gap-space-xs text-tertiary font-body-md text-body-md mt-0.5">
+<span class="material-symbols-outlined text-[16px] text-primary">near_me</span>
+<span>4.1 km away • Central Trauma Annex</span>
+</div>
+</div>
+</div>
+<span class="px-space-sm py-1 rounded-full bg-surface-container-highest text-on-surface font-label-md text-label-md font-semibold shrink-0">
+                  Open 24x7
+                </span>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-1 rounded-lg bg-surface-container-lowest text-on-surface font-body-bold text-body-bold">
+                    B+ (12 Units Available)
+                  </span>
+</div>
+<button class="min-h-[48px] px-space-lg rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg font-bold shadow-sm transition-all active:scale-95" onclick="selectResultAndTrack('AIIMS Blood Repository', 'B+ (12 Units)', '4.1 km', '16 min')" type="button">
+                  Request
+                </button>
+</div>
+</div>
+</div>
+<button class="w-full min-h-[48px] rounded-xl bg-surface-container-low text-tertiary hover:text-on-surface font-label-md text-label-md font-semibold flex items-center justify-center gap-1 transition-colors" onclick="switchState(1)" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Modify Requirement Filters</span>
+</button>
+</div>
+<!-- ================= STATE 3: DISPATCH STATUS & TRACKING ================= -->
+<div class="hidden bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-lg" id="view-state-3">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-caption text-caption text-primary font-bold uppercase tracking-wider">Live Request #BLD-9041</span>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-0.5">Delivery in Progress</h2>
+</div>
+<span class="px-space-sm py-1 rounded-full bg-secondary-fixed text-secondary font-label-md text-label-md font-bold flex items-center gap-1 animate-pulse">
+<span class="material-symbols-outlined text-[18px]">two_wheeler</span>
+              En Route
+            </span>
+</div>
+<!-- Step Progress Timeline -->
+<div class="relative flex flex-col gap-space-md pl-2">
+<!-- Step 1 -->
+<div class="flex items-center gap-space-md">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex-1 flex items-center justify-between">
+<span class="font-body-bold text-body-bold text-on-surface">Request sent</span>
+<span class="font-caption text-caption text-tertiary">14:02 PM</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex items-center gap-space-md">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex-1 flex items-center justify-between">
+<span class="font-body-bold text-body-bold text-on-surface">Donors notified</span>
+<span class="font-caption text-caption text-tertiary">14:03 PM (18 nearby)</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex items-center gap-space-md">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex-1 flex items-center justify-between">
+<span class="font-body-bold text-body-bold text-on-surface">Donor accepted</span>
+<span class="font-caption text-caption text-tertiary">14:05 PM</span>
+</div>
+</div>
+<!-- Step 4 (Active) -->
+<div class="flex items-center gap-space-md">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-secondary flex items-center justify-center shrink-0 ring-4 ring-secondary/20 shadow-sm">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span>
+</span>
+</div>
+<div class="flex-1 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body-bold text-body-bold text-secondary">On the way</span>
+<span class="font-caption text-caption text-tertiary">Driver navigation locked</span>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-secondary/10 text-secondary font-label-md text-label-md font-bold">Live</span>
+</div>
+</div>
+<!-- Step 5 (Pending) -->
+<div class="flex items-center gap-space-md opacity-60">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">inventory_2</span>
+</div>
+<div class="flex-1 flex items-center justify-between">
+<span class="font-body-bold text-body-bold text-on-surface">Handover &amp; Cold Box Seal Verify</span>
+<span class="font-caption text-caption text-tertiary">Est. 14:18 PM</span>
+</div>
+</div>
+</div>
+<!-- Active Donor Card -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm font-bold">
+<span class="material-symbols-outlined text-[28px]">account_circle</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Amit Sharma</h4>
+<p class="font-caption text-caption text-tertiary">B+ Whole Blood Courier • Volunteer</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">12 mins</span>
+<p class="font-caption text-caption text-tertiary">Remaining ETA</p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs font-label-md text-label-md text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">two_wheeler</span>
+<span>Bike (DL-8C-4321)</span>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-lowest font-mono font-semibold">Cold Chain Inspected</span>
+</div>
+<button class="w-full min-h-[56px] mt-space-xs rounded-xl bg-primary text-on-primary font-label-lg text-label-lg font-bold flex items-center justify-center gap-space-sm hover:bg-primary-container shadow-sm transition-all active:scale-[0.99]" onclick="callDonor()" type="button">
+<span class="material-symbols-outlined text-[22px]">phone_in_talk</span>
+<span>Call Donor (+91 9811X XXXXX)</span>
+</button>
+</div>
+<!-- Handover Verification Code Box -->
+<div class="p-space-md rounded-xl bg-primary/10 flex flex-col gap-space-xs items-center text-center">
+<span class="font-label-md text-label-md text-primary font-bold tracking-wide uppercase">Handover Verification Code</span>
+<div class="text-[36px] font-extrabold tracking-widest text-primary font-mono select-all">
+              8492
+            </div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm">
+              Share this 4-digit code <span class="font-bold text-on-surface">only after receipt</span> of sealed, temperature-regulated blood pack.
+            </p>
+</div>
+</div>
+</section>
+<!-- ================= RIGHT COLUMN (~60% = 7 cols on 12-grid) ================= -->
+<section class="col-span-12 lg:col-span-7 flex flex-col gap-space-md">
+<!-- 3D Map Container with Overlays -->
+<div class="relative w-full h-[620px] rounded-xl overflow-hidden bg-surface-container-high shadow-md">
+<!-- Static GIS Map Placeholder via styled background with data-location -->
+<div class="w-full h-full bg-cover bg-center" data-alt="Satellite high clarity 3D map interface showing urban Delhi street grid with topological layers, clear navigational path lines, medical building footprints and soft telemetry overlays in surgical teal and safety accents." data-location="Rohini Sector 14, Delhi, India" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuABw9ulO3qaVDzdI7cQy_dTV6Ny5cDIPieAZGgYZVNTP9rN0KW8szsByeZsGIt4blBS-WVRj1ONQsrpMwDivTNY6mUYhKHK-FQYZdKl10Af-VUv5FC5Cda7lFJ4ThVxypvkXgWi8t6exTO4Dr_oFjGWJ2gZfhLCibu7ZAJpGNlyTkG1eY_jLQHMwXEIsg7gcOL57w2VUkGR5w1MksOtVEMjbfhxonskL5L5Ayy2BMQ3');">
+</div>
+<!-- Fallback Visual SVG Overlay to depict 3D route, blood bank markers, and donor telemetry -->
+<div class="absolute inset-0 pointer-events-none p-space-md flex flex-col justify-between">
+<!-- Map Top Overlay: Controls & Status -->
+<div class="flex items-center justify-between pointer-events-auto">
+<!-- Location / Recenter Tag -->
+<div class="flex items-center gap-space-xs px-space-md py-space-sm rounded-xl bg-surface-container-lowest/90 backdrop-blur-md shadow-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">explore</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">Rohini Hub 3D • Altitude 45m</span>
+</div>
+<!-- Perspective & Recenter Buttons -->
+<div class="flex items-center gap-space-xs">
+<div class="flex items-center bg-surface-container-lowest/90 backdrop-blur-md rounded-xl p-1 shadow-sm">
+<button class="px-space-sm py-1 rounded-lg text-tertiary hover:text-on-surface font-label-md text-label-md font-semibold" type="button">2D</button>
+<button class="px-space-sm py-1 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-bold shadow-sm" type="button">3D Ortho</button>
+</div>
+<button class="w-12 h-12 rounded-xl bg-surface-container-lowest/90 backdrop-blur-md text-on-surface shadow-sm hover:bg-surface flex items-center justify-center transition-transform active:scale-95" title="Recenter Location" type="button">
+<span class="material-symbols-outlined text-[22px]">my_location</span>
+</button>
+</div>
+</div>
+<!-- Route Visualization SVG Graphic (Mock telemetry line & dynamic blood pins) -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<svg class="w-full h-full" fill="none" viewbox="0 0 700 500" xmlns="http://www.w3.org/2000/svg">
+<!-- Transit Route glow line -->
+<path class="animate-pulse" d="M 180 340 C 260 300, 310 260, 420 210 C 470 190, 520 170, 550 140" stroke="#00685c" stroke-dasharray="8 8" stroke-linecap="round" stroke-width="6"></path>
+<path d="M 180 340 C 260 300, 310 260, 420 210 C 470 190, 520 170, 550 140" stroke="#81f6e3" stroke-linecap="round" stroke-width="2"></path>
+<!-- Destination: Patient in Rohini -->
+<g transform="translate(180, 340)">
+<circle class="animate-ping" fill="#00685c" fill-opacity="0.2" r="22"></circle>
+<circle fill="#00685c" r="14"></circle>
+<circle fill="#ffffff" r="6"></circle>
+<text fill="#111c29" font-family="Inter" font-size="12" font-weight="700" x="-35" y="32">Patient (Sector 14)</text>
+</g>
+<!-- Donor / Bank 1 (Rotary Blood Bank) -->
+<g transform="translate(420, 210)">
+<circle fill="#b7131a" fill-opacity="0.2" r="18"></circle>
+<rect fill="#b7131a" height="28" rx="8" width="28" x="-14" y="-14"></rect>
+<path d="M -6 0 L 6 0 M 0 -6 L 0 6" stroke="#ffffff" stroke-linecap="round" stroke-width="3"></path>
+<text fill="#111c29" font-family="Inter" font-size="12" font-weight="700" x="18" y="5">Rotary Bank (1.8km)</text>
+</g>
+<!-- Donor 2 (Active en route bike) -->
+<g transform="translate(330, 255)">
+<circle fill="#00685c" r="16"></circle>
+<path d="M -5 -3 L 5 -3 L 0 6 Z" fill="#ffffff"></path>
+</g>
+<!-- Additional Blood Bank Pin -->
+<g transform="translate(550, 140)">
+<circle fill="#525c6e" r="12"></circle>
+<circle fill="#ffffff" r="4"></circle>
+<text fill="#111c29" font-family="Inter" font-size="11" font-weight="600" x="14" y="4">AIIMS Annex (4.1km)</text>
+</g>
+</svg>
+</div>
+<!-- Route Summary Pill (Bottom-Left of Map) -->
+<div class="pointer-events-auto flex items-end justify-between">
+<div class="flex items-center gap-space-md p-space-md rounded-xl bg-surface-container-lowest/95 backdrop-blur-md shadow-md max-w-sm">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">route</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">2.1 km</span>
+<span class="font-body-md text-body-md text-tertiary">• 8 min Transit</span>
+</div>
+<span class="font-caption text-caption text-primary font-semibold">Priority green-corridor dispatch logged</span>
+</div>
+</div>
+<!-- Map Legend Collapsible Drawer -->
+<div class="p-space-sm rounded-xl bg-surface-container-lowest/90 backdrop-blur-md shadow-sm flex flex-col gap-1 text-on-surface font-caption text-caption">
+<div class="flex items-center gap-1.5 font-bold mb-0.5 text-tertiary">
+<span class="material-symbols-outlined text-[14px]">layers</span>
+<span>GIS Map Key</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span>Active Blood Bank</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span>Live Verified Donor</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<span>24x7 Repository</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ================= DOCKED VOICE PANEL ('Talk to HelpMe') ================= -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[22px]">keyboard_voice</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Talk to HelpMe</h3>
+<span class="font-caption text-caption text-tertiary">Speak in your language • Hindi, English, Punjabi, Bengali &amp; 12+ dialects</span>
+</div>
+</div>
+<!-- Voice Activity Soundwave Bars -->
+<div class="flex items-center gap-1 h-6 px-space-sm py-1 rounded-full bg-primary/10">
+<span class="w-1 h-3 bg-primary rounded-full animate-pulse"></span>
+<span class="w-1 h-5 bg-primary rounded-full animate-bounce"></span>
+<span class="w-1 h-2 bg-primary rounded-full animate-pulse"></span>
+<span class="w-1 h-4 bg-primary rounded-full animate-bounce"></span>
+<span class="font-caption text-[11px] text-primary font-bold ml-1">AI Ready</span>
+</div>
+</div>
+<!-- Interactive Voice Action Widget Bar (Min 60px height) -->
+<div class="flex flex-col md:flex-row items-stretch md:items-center gap-space-sm">
+<button class="min-h-[60px] flex-1 px-space-md rounded-xl bg-primary text-on-primary flex items-center justify-between shadow-sm hover:bg-primary-container transition-all active:scale-[0.99]" id="voice-trigger-btn" onclick="triggerVoiceAssist()" type="button">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[24px]">mic</span>
+<span class="font-label-lg text-label-lg font-bold" id="voice-status-text">Tap and speak blood requirement...</span>
+</div>
+<span class="px-space-xs py-1 rounded bg-on-primary/20 text-on-primary text-[12px] font-mono">22 Languages</span>
+</button>
+<!-- Quick Suggestion Chip 1 -->
+<button class="min-h-[60px] px-space-md rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-colors" onclick="executeVoiceQuery('Find B+ whole blood near Rohini')" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">record_voice_over</span>
+<span>"Find B+ whole blood near me"</span>
+</button>
+</div>
+<!-- Voice Suggestions List -->
+<div class="flex flex-wrap items-center gap-space-xs pt-space-xs">
+<span class="font-caption text-caption text-tertiary">Quick speech prompts:</span>
+<button class="px-space-sm py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface font-caption text-caption" onclick="executeVoiceQuery('रोहिणी में ओ नेगेटिव रक्त दाता खोजें')" type="button">
+              "रोहिणी में B+ रक्त बैंक खोजें"
+            </button>
+<button class="px-space-sm py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface font-caption text-caption" onclick="executeVoiceQuery('Need 2 units platelets urgently')" type="button">
+              "Need 2 units platelets urgently"
+            </button>
+<button class="px-space-sm py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface font-caption text-caption" onclick="executeVoiceQuery('Nearest government blood bank')" type="button">
+              "Nearest 24x7 government blood bank"
+            </button>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+<script>
+  let currentUnits = 2;
+  let currentGroup = 'B+';
+  let currentUrgency = 'urgent';
+
+  function switchState(stateNumber) {
+    const view1 = document.getElementById('view-state-1');
+    const view2 = document.getElementById('view-state-2');
+    const view3 = document.getElementById('view-state-3');
+
+    const tab1 = document.getElementById('tab-state-1');
+    const tab2 = document.getElementById('tab-state-2');
+    const tab3 = document.getElementById('tab-state-3');
+
+    // Hide all
+    view1.classList.add('hidden');
+    view2.classList.add('hidden');
+    view3.classList.add('hidden');
+
+    // Reset tabs
+    [tab1, tab2, tab3].forEach(t => {
+      t.className = 'state-tab-btn flex-1 py-space-sm px-space-xs rounded-lg text-center font-label-md text-label-md transition-all duration-200 text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1';
+      const badge = t.querySelector('span:first-child');
+      if (badge) {
+        badge.className = 'w-5 h-5 rounded-full bg-surface-container-highest text-tertiary text-[12px] flex items-center justify-center font-bold';
+      }
+    });
+
+    const activeTab = document.getElementById(`tab-state-${stateNumber}`);
+    if (activeTab) {
+      activeTab.className = 'state-tab-btn flex-1 py-space-sm px-space-xs rounded-lg text-center font-label-md text-label-md transition-all duration-200 bg-surface-container-lowest text-primary shadow-sm font-bold flex items-center justify-center gap-1';
+      const activeBadge = activeTab.querySelector('span:first-child');
+      if (activeBadge) {
+        activeBadge.className = 'w-5 h-5 rounded-full bg-primary text-on-primary text-[12px] flex items-center justify-center font-bold';
+      }
+    }
+
+    if (stateNumber === 1) view1.classList.remove('hidden');
+    if (stateNumber === 2) view2.classList.remove('hidden');
+    if (stateNumber === 3) view3.classList.remove('hidden');
+  }
+
+  function selectGroup(btn, group) {
+    currentGroup = group;
+    const buttons = document.querySelectorAll('#blood-group-grid button');
+    buttons.forEach(b => {
+      b.className = 'bg-surface-container-low hover:bg-surface-container text-on-surface font-headline-sm text-headline-sm h-14 rounded-xl flex items-center justify-center transition-all';
+    });
+    btn.className = 'bg-primary text-on-primary shadow-sm font-headline-sm text-headline-sm h-14 rounded-xl flex items-center justify-center transition-all ring-2 ring-primary ring-offset-2';
+  }
+
+  function adjustUnits(delta) {
+    currentUnits += delta;
+    if (currentUnits < 1) currentUnits = 1;
+    if (currentUnits > 10) currentUnits = 10;
+    const display = document.getElementById('units-display');
+    if (display) {
+      display.textContent = `${currentUnits} Unit${currentUnits > 1 ? 's' : ''}`;
+    }
+  }
+
+  function setUrgency(type) {
+    currentUrgency = type;
+    const urgentBtn = document.getElementById('urgency-immediate');
+    const within24Btn = document.getElementById('urgency-24h');
+
+    if (type === 'urgent') {
+      urgentBtn.className = 'min-h-[56px] px-space-md rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center gap-space-xs shadow-sm font-label-lg text-label-lg font-bold ring-2 ring-secondary ring-offset-1';
+      within24Btn.className = 'min-h-[56px] px-space-md rounded-xl bg-surface-container-low text-on-surface-variant hover:bg-surface-container flex items-center justify-center gap-space-xs font-label-lg text-label-lg transition-all';
+    } else {
+      within24Btn.className = 'min-h-[56px] px-space-md rounded-xl bg-primary text-on-primary flex items-center justify-center gap-space-xs shadow-sm font-label-lg text-label-lg font-bold ring-2 ring-primary ring-offset-1';
+      urgentBtn.className = 'min-h-[56px] px-space-md rounded-xl bg-surface-container-low text-on-surface-variant hover:bg-surface-container flex items-center justify-center gap-space-xs font-label-lg text-label-lg transition-all';
+    }
+  }
+
+  function useMyLocation() {
+    const locField = document.getElementById('delivery-location');
+    locField.value = 'Locating GPS...';
+    setTimeout(() => {
+      locField.value = 'Rohini Sector 14, Main Institutional Area, Delhi';
+    }, 400);
+  }
+
+  function toggleResultFilter(type) {
+    const donorsTab = document.getElementById('subtab-donors');
+    const banksTab = document.getElementById('subtab-banks');
+
+    if (type === 'donors') {
+      donorsTab.className = 'flex-1 min-h-[44px] rounded-lg font-label-md text-label-md font-semibold bg-surface-container-lowest text-on-surface shadow-sm transition-all flex items-center justify-center gap-1.5';
+      banksTab.className = 'flex-1 min-h-[44px] rounded-lg font-label-md text-label-md font-semibold text-tertiary hover:text-on-surface transition-all flex items-center justify-center gap-1.5';
+    } else {
+      banksTab.className = 'flex-1 min-h-[44px] rounded-lg font-label-md text-label-md font-semibold bg-surface-container-lowest text-on-surface shadow-sm transition-all flex items-center justify-center gap-1.5';
+      donorsTab.className = 'flex-1 min-h-[44px] rounded-lg font-label-md text-label-md font-semibold text-tertiary hover:text-on-surface transition-all flex items-center justify-center gap-1.5';
+    }
+  }
+
+  function selectResultAndTrack(name, group, distance, eta) {
+    switchState(3);
+  }
+
+  function callDonor() {
+    alert('Connecting secure emergency call to Amit Sharma (DL-8C-4321)...');
+  }
+
+  function triggerVoiceAssist() {
+    const txt = document.getElementById('voice-status-text');
+    txt.textContent = 'Listening (Hindi / English)... Say "Need B+ blood"';
+    setTimeout(() => {
+      txt.textContent = 'Processed: B+ whole blood near Rohini (2 units)';
+      setTimeout(() => {
+        switchState(2);
+      }, 700);
+    }, 1500);
+  }
+
+  function executeVoiceQuery(query) {
+    const txt = document.getElementById('voice-status-text');
+    txt.textContent = `Executing: "${query}"`;
+    setTimeout(() => {
+      switchState(2);
+    }, 600);
+  }
+</script></main></body></html>

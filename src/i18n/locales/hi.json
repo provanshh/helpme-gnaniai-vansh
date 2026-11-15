@@ -1,0 +1,226 @@
+{
+  "brand": {
+    "name": "HelpMe",
+    "tagline": "आपातकालीन चिकित्सा सहायता",
+    "subtitle": "तेज़ मदद। आपकी भाषा में।"
+  },
+  "nav": {
+    "home": "होम",
+    "map": "मानचित्र",
+    "requests": "अनुरोध",
+    "profile": "प्रोफ़ाइल",
+    "changeLanguage": "भाषा बदलें"
+  },
+  "common": {
+    "continue": "आगे बढ़ें",
+    "cancel": "रद्द करें",
+    "call": "कॉल करें",
+    "navigate": "नेविगेट",
+    "request": "अनुरोध",
+    "openNow": "अभी खुला",
+    "km": "किमी",
+    "min": "मिनट",
+    "loading": "लोड हो रहा है…",
+    "emptyTitle": "अभी कुछ नहीं",
+    "emptyDescription": "दूसरा फ़िल्टर आज़माएँ या थोड़ी देर बाद देखें।",
+    "comingSoon": "यह स्क्रीन जल्द तैयार होगी।",
+    "call112": "आपात में 112 पर कॉल करें"
+  },
+  "onboarding": {
+    "badge": "24/7 अखिल भारतीय डिस्पैच",
+    "title": "अपनी भाषा चुनें",
+    "hint": "भाषा चुनें या बोलने के लिए माइक दबाएँ।",
+    "locationTitle": "अपना स्थान साझा करें",
+    "locationBody": "आपका सटीक स्थान केवल सत्यापित एम्बुलेंस और डिस्पैचर के साथ साझा होता है।",
+    "enableGps": "उच्च-सटीक GPS चालू करें",
+    "continue": "HelpMe पर जारी रखें"
+  },
+  "home": {
+    "eyebrow": "आपातकालीन प्रवेश प्रणाली",
+    "gpsLive": "लाइव GPS सक्रिय",
+    "gpsPending": "GPS सटीकता की प्रतीक्षा…",
+    "title": "अभी चिकित्सा सहायता चाहिए?",
+    "greeting": "नमस्ते",
+    "greetingSub": "आपातकालीन डिस्पैच या चिकित्सा सहायता चाहिए?",
+    "services": "आपातकालीन सेवाएँ",
+    "servicesHint": "मानचित्र फ़िल्टर करने के लिए टैप करें",
+    "sosTitle": "आपातकालीन SOS",
+    "sosBadge": "एक टैप अलर्ट",
+    "sosBody": "निकटतम सत्यापित एम्बुलेंस भेजता है, संपर्कों को अलर्ट करता है, और स्थान साझा करता है।",
+    "emergencyLines": "टोल-फ्री आपातकालीन नंबर",
+    "donorCta": "रक्तदाता बनें",
+    "donorSub": "अपने इलाके में जीवन बचाएँ",
+    "talkTitle": "HelpMe से बात करें",
+    "talkSub": "किसी भी भारतीय भाषा में बोलें"
+  },
+  "services": {
+    "ambulance": "एम्बुलेंस",
+    "ambulanceSub": "4–8 मिनट दूर",
+    "hospitals": "अस्पताल",
+    "hospitalsSub": "ट्रॉमा और ICU",
+    "blood": "रक्त खोजें",
+    "bloodSub": "दुर्लभ और दाता",
+    "doctors": "डॉक्टर",
+    "doctorsSub": "OPD और वीडियो कॉल",
+    "pharmacy": "फार्मेसी",
+    "pharmacySub": "24x7 केमिस्ट",
+    "ai": "AI सहायक",
+    "aiSub": "प्राथमिक उपचार",
+    "all": "सभी सेवाएँ"
+  },
+  "sos": {
+    "short": "SOS",
+    "aria": "SOS आपातकाल शुरू करें",
+    "title": "SOS आपातकाल",
+    "countdown": "सहायता व्यवस्थित हो रही है",
+    "arranging": "मदद व्यवस्थित की जा रही है",
+    "steps": {
+      "location": "स्थान साझा",
+      "ambulance": "एम्बुलेंस सूचित",
+      "hospital": "अस्पताल अलर्ट",
+      "contacts": "संपर्क SMS"
+    }
+  },
+  "voice": {
+    "idle": "HelpMe से बात करें",
+    "listening": "सुन रहा है…",
+    "understanding": "समझ रहा है…",
+    "speaking": "बोल रहा है…",
+    "placeholder": "अपनी आपात स्थिति लिखें…",
+    "error": "सुनाई नहीं दिया। लिखकर कोशिश करें।",
+    "chipHospitals": "अस्पताल दिखाएँ",
+    "chipBlood": "B+ रक्त चाहिए",
+    "chipAmbulance": "एम्बुलेंस बुलाएँ"
+  },
+  "map": {
+    "recenter": "मानचित्र केंद्रित करें",
+    "toggle3d": "3D दृश्य बदलें",
+    "youAreHere": "आप यहाँ हैं",
+    "sampleLocation": "GPS अनुपलब्ध · फ़ॉलबैक स्थान (रोहिणी, दिल्ली)",
+    "demoAttribution": "केवल डेमो दाता और अनुरोध",
+    "osmAttribution": "© OpenStreetMap contributors",
+    "mapboxAttribution": "Mapbox",
+    "freeTiles": "लाइव स्ट्रीट मैप",
+    "pageHint": "मार्ग, दूरी और ETA के लिए मानचित्र या सूची से स्थान चुनें।"
+  },
+  "places": {
+    "phoneUnavailable": "फ़ोन उपलब्ध नहीं",
+    "hoursNotListed": "समय सूचीबद्ध नहीं",
+    "verified": "सत्यापित",
+    "unverified": "असत्यापित",
+    "demo": "डेमो",
+    "reportWrong": "गलत जानकारी रिपोर्ट करें",
+    "reportSent": "रिपोर्ट भेजी गई",
+    "offlineBanner": "ऑफ़लाइन, सीमित डेटा दिख रहा है",
+    "findingHelp": "आपके पास मदद खोज रहे हैं...",
+    "widened": "निकटतम विकल्प अधिक दूर हैं"
+  },
+  "pages": {
+    "hospitals": "अस्पताल",
+    "doctors": "डॉक्टर और क्लिनिक",
+    "pharmacy": "दवा और फार्मेसी",
+    "blood": "रक्त खोजें",
+    "ambulance": "एम्बुलेंस",
+    "voice": "AI सहायक",
+    "donorRegister": "दाता पंजीकरण",
+    "donorHome": "दाता होम",
+    "hospitalDash": "अस्पताल डैशबोर्ड",
+    "requests": "आपके अनुरोध",
+    "profile": "प्रोफ़ाइल",
+    "fullMap": "लाइव मानचित्र",
+    "register": "प्रदाता पंजीकरण"
+  },
+  "register": {
+    "name": "नाम / संगठन",
+    "phone": "फ़ोन (वैकल्पिक)",
+    "address": "पता (वैकल्पिक)",
+    "submit": "सत्यापन के लिए भेजें",
+    "pending": "भेजा गया — व्यवस्थापक स्वीकृति लंबित",
+    "failed": "सबमिट नहीं हो सका। क्या API चल रहा है?"
+  },
+  "hospitals": {
+    "search": "अस्पताल, ट्रॉमा, ICU खोजें…",
+    "trauma": "ट्रॉमा / ICU",
+    "open24": "24x7 खुला",
+    "govt": "सरकारी"
+  },
+  "doctors": {
+    "search": "क्लिनिक और विशेषता खोजें…"
+  },
+  "pharmacy": {
+    "search": "दवा या फार्मेसी खोजें…",
+    "open24": "24 घंटे",
+    "delivery": "होम डिलीवरी",
+    "askAi": "AI सहायक से पूछें"
+  },
+  "blood": {
+    "pickGroup": "आवश्यक रक्त समूह चुनें",
+    "units": "यूनिट",
+    "findMatches": "मैच खोजें",
+    "matches": "उपलब्ध मैच",
+    "sendRequest": "रक्त अनुरोध भेजें",
+    "tracking": "डिलीवरी जारी",
+    "handoverCode": "हैंडओवर कोड",
+    "requestSent": "रक्त अनुरोध भेजा (डेमो)",
+    "donorNearby": "नज़दीकी दाता",
+    "demoDonor": "डेमो दाता",
+    "eligible": "पात्र",
+    "status": {
+      "searching": "दाता खोज",
+      "accepted": "दाता स्वीकृत",
+      "onWay": "रास्ते में",
+      "handover": "हैंडओवर"
+    }
+  },
+  "ambulance": {
+    "requestNearest": "निकटतम एम्बुलेंस अनुरोध",
+    "dispatched": "निकटतम एम्बुलेंस भेजी",
+    "dispatchedDemo": "डेमो एम्बुलेंस भेजी (सिम्युलेटेड)"
+  },
+  "requests": {
+    "active": "सक्रिय",
+    "past": "पिछले"
+  },
+  "profile": {
+    "language": "भाषा",
+    "languageHint": "हर स्क्रीन पर दिखे",
+    "becomeDonor": "दाता बनें",
+    "donorHome": "दाता होम",
+    "hospitalDash": "अस्पताल डैशबोर्ड",
+    "demoTag": "दाता नमूना डेटा हैं",
+    "demoBody": "अस्पताल, क्लिनिक, फार्मेसी आदि OpenStreetMap से API के माध्यम से आते हैं। दाता और अनुरोध प्रगति डेमो हैं।",
+    "contacts": "आपातकालीन संपर्क",
+    "registerProvider": "एम्बुलेंस / NGO / डॉक्टर पंजीकरण",
+    "admin": "व्यवस्थापक स्वीकृति",
+    "driver": "ड्राइवर GPS पेज"
+  },
+  "donor": {
+    "stepInfo": "जानकारी",
+    "stepBlood": "रक्त",
+    "stepOtp": "OTP",
+    "firstName": "पहला नाम",
+    "phone": "फ़ोन (डेमो)",
+    "otpHint": "कोई भी 4 अंक दर्ज करें (OTP नकली)",
+    "verify": "सत्यापित करें",
+    "registered": "दाता पंजीकृत (डेमो)",
+    "availability": "उपलब्धता",
+    "available": "अभी उपलब्ध",
+    "unavailable": "अनुपलब्ध",
+    "activeRequest": "सक्रिय अनुरोध",
+    "accept": "स्वीकार",
+    "decline": "अस्वीकार",
+    "accepted": "अनुरोध स्वीकृत",
+    "declined": "अनुरोध अस्वीकृत",
+    "history": "इतिहास"
+  },
+  "hospital": {
+    "active": "सक्रिय अनुरोध",
+    "bloodUnits": "रक्त यूनिट",
+    "icuBeds": "खाली ICU बेड",
+    "ambulances": "खाली एम्बुलेंस",
+    "useBed": "ICU बेड आवंटित",
+    "toggleAmb": "एम्बुलेंस टॉगल",
+    "incoming": "आने वाले अनुरोध",
+    "stock": "रक्त स्टॉक (डेमो)"
+  }
+}

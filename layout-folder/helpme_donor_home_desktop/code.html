@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Noto+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-container":"#e4efff","error":"#ba1a1a","primary-fixed-dim":"#63dac7","surface-container-highest":"#d8e3f5","inverse-surface":"#27313e","on-background":"#111c29","surface-tint":"#006b5f","surface-container-low":"#eef4ff","on-surface":"#111c29","surface-container-high":"#dee9fa","on-error-container":"#93000a","secondary-container":"#db322f","on-tertiary":"#ffffff","surface-container-lowest":"#ffffff","secondary-fixed":"#ffdad6","on-primary-fixed-variant":"#005047","on-error":"#ffffff","tertiary-fixed":"#d9e3f7","on-tertiary-fixed":"#121c2b","inverse-on-surface":"#e9f1ff","on-secondary-fixed-variant":"#93000d","surface":"#f8f9ff","inverse-primary":"#63dac7","error-container":"#ffdad6","secondary":"#b7131a","on-surface-variant":"#3d4946","surface-dim":"#d0dbec","on-secondary-fixed":"#410002","on-tertiary-fixed-variant":"#3d4758","outline":"#6d7a76","on-secondary":"#ffffff","on-tertiary-container":"#fefcff","tertiary-fixed-dim":"#bdc7db","on-primary-fixed":"#00201c","tertiary-container":"#6b7587","background":"#f8f9ff","on-primary":"#ffffff","tertiary":"#525c6e","on-secondary-container":"#fffbff","primary-container":"#008375","outline-variant":"#bcc9c5","on-primary-container":"#f4fffb","surface-variant":"#d8e3f5","primary-fixed":"#81f6e3","secondary-fixed-dim":"#ffb4ac","primary":"#00685c","surface-bright":"#f8f9ff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xl":"2.5rem","space-md":"1rem","gutter-desktop":"2rem","space-lg":"1.5rem","margin-tablet":"2rem","gutter-tablet":"1.5rem","gutter":"1rem","margin-desktop":"3rem","space-sm":"0.5rem","margin":"1rem","space-xs":"0.25rem"},"fontFamily":{"label-lg":["Inter"],"display-lg-mobile":["Inter"],"headline-md":["Inter"],"headline-sm":["Inter"],"body-md":["Noto Sans"],"display-lg":["Inter"],"label-md":["Inter"],"headline-lg":["Inter"],"body-lg":["Noto Sans"],"caption":["Noto Sans"],"headline-lg-mobile":["Inter"],"body-bold":["Noto Sans"]},"fontSize":{"label-lg":["16px",{"lineHeight":"24px","fontWeight":"600"}],"display-lg-mobile":["32px",{"lineHeight":"40px","fontWeight":"700"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"display-lg":["48px",{"lineHeight":"56px","fontWeight":"700"}],"label-md":["14px",{"lineHeight":"20px","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","fontWeight":"700"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"caption":["13px",{"lineHeight":"18px","fontWeight":"500"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","fontWeight":"700"}],"body-bold":["16px",{"lineHeight":"24px","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(26,36,51,0.06)]"><div class="h-16 w-full px-gutter-desktop max-w-[1440px] mx-auto flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs"><div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[22px]">emergency</span></div><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-bold">HelpMe <span class="text-primary">Emergency</span></span></div><div class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md"><span class="material-symbols-outlined text-[18px] text-primary">location_on</span><span>Rohini, Delhi</span></div></div><nav class="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-surface-container-high text-on-surface font-label-lg rounded-lg"><a aria-current="page" class="px-space-md py-space-xs transition-colors bg-surface-container-high text-on-surface font-label-lg rounded-lg" data-path="home" href="#">Home</a><a class="px-space-md py-space-xs font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded-lg transition-colors" data-path="map" href="#">Map</a><a class="px-space-md py-space-xs font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded-lg transition-colors flex items-center gap-space-xs" data-path="requests" href="#"><span>Requests</span><span class="w-5 h-5 rounded-full bg-secondary text-on-secondary font-label-md text-[11px] leading-none flex items-center justify-center">3</span></a><a class="px-space-md py-space-xs font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded-lg transition-colors" data-path="profile" href="#">Profile</a></nav><div class="flex items-center gap-space-md"><button class="px-space-sm py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-container hover:text-on-surface transition-colors flex items-center gap-space-xs" type="button"><span>हिं / EN</span><span class="material-symbols-outlined text-[16px]">expand_more</span></button><a class="px-space-md py-2 rounded-lg bg-secondary text-on-secondary font-headline-sm text-label-lg tracking-wide hover:bg-secondary-container hover:text-on-secondary-container transition-all shadow-[0_4px_16px_-2px_rgba(229,57,53,0.35)] flex items-center gap-space-xs" data-path="sos-dispatch" href="#"><span class="material-symbols-outlined text-[20px]">e911_emergency</span><span>SOS 112</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full">
+<div class="w-full max-w-[1440px] mx-auto px-gutter-desktop py-space-md">
+<!-- Top System Context Strip -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm mb-space-md bg-surface-container-low px-space-md py-2.5 rounded-xl">
+<div class="flex items-center gap-space-sm text-on-surface">
+<span class="flex h-2.5 w-2.5 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
+</span>
+<span class="font-label-md text-label-md tracking-tight">Active Sentinel Mode: High-Urgency Trauma Alerts Active</span>
+<span class="text-outline-variant font-caption text-caption">•</span>
+<span class="text-on-surface-variant font-caption text-caption">Sector 14 Grid Sync: 12 seconds ago</span>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-caption text-caption">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">shield</span>
+<span>Verified Citizen Lifesaver</span>
+</div>
+<span class="text-outline-variant">•</span>
+<span class="font-label-md text-label-md text-primary bg-surface-container-highest px-2 py-0.5 rounded-lg">Rank #18 Rohini Division</span>
+</div>
+</div>
+<!-- Main Split Screen Workspace -->
+<div class="grid grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN (~40% desktop: 5 cols out of 12) -->
+<div class="col-span-12 lg:col-span-5 flex flex-col gap-space-md">
+<!-- Header Section -->
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="px-2 py-0.5 rounded-md bg-primary/10 text-primary font-label-md text-label-md uppercase tracking-wider">Blood Lifesaver Desk</span>
+<span class="text-outline-variant text-caption">#DL-ROHINI-14</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Donor Dashboard</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Rohini Sector 14 Blood Lifesaver Network</p>
+</div>
+<div class="w-12 h-12 rounded-2xl bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+</div>
+</div>
+<!-- Status Card: Available Now Toggle -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm transition-all hover:shadow-md">
+<div class="flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-11 h-11 rounded-xl bg-primary-fixed/30 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">contactless</span>
+</div>
+<div>
+<span class="font-label-lg text-label-lg text-on-surface block">Availability Status</span>
+<p class="font-caption text-caption text-primary flex items-center gap-1 font-semibold mt-0.5" id="availabilityStatusText">
+<span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+                  You are on-call • 5km radius active
+                </p>
+</div>
+</div>
+<!-- Custom Accessible Toggle -->
+<button aria-checked="true" class="relative inline-flex h-8 w-14 shrink-0 cursor-pointer rounded-full bg-primary p-1 transition-colors duration-200 ease-in-out focus:outline-none" id="donorToggleBtn" role="switch" type="button">
+<span class="sr-only">Toggle availability</span>
+<span class="pointer-events-none inline-block h-6 w-6 transform translate-x-6 rounded-full bg-surface-container-lowest shadow-md transition duration-200 ease-in-out" id="donorToggleThumb"></span>
+</button>
+</div>
+<div class="mt-space-sm pt-space-sm bg-surface-container-low px-3 py-2 rounded-xl flex items-center justify-between text-on-surface-variant font-caption text-caption">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">radar</span>
+              Auto-matching trauma wards in Rohini, Pitampura, Mangolpuri
+            </span>
+<span class="font-semibold text-on-surface">5.0 km</span>
+</div>
+</div>
+<!-- High Priority Card: Active Request Near You -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-md relative overflow-hidden">
+<!-- Subtle Top Indicator Strip -->
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-secondary"></div>
+<div class="flex items-center justify-between mb-space-sm pt-1">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-fixed text-secondary font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-[16px] animate-pulse">crisis_alert</span>
+<span>ACTIVE REQUEST NEAR YOU</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">timer</span>
+              Expires in 42m
+            </span>
+</div>
+<!-- Blood Type Requirement Banner -->
+<div class="flex items-center justify-between gap-space-sm bg-surface-container-low p-space-sm rounded-xl mb-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="px-3 py-1.5 rounded-xl bg-secondary text-on-secondary font-headline-sm text-headline-sm font-bold tracking-tight shadow-sm">
+                B+
+              </div>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface block leading-tight font-bold">B+ Whole Blood</span>
+<span class="font-caption text-caption text-on-surface-variant">2 Units required urgently for OT 03</span>
+</div>
+</div>
+<div class="text-right">
+<span class="text-caption font-semibold uppercase tracking-wider text-secondary bg-secondary-fixed px-2 py-0.5 rounded">Critical Match</span>
+</div>
+</div>
+<!-- Hospital Details & ETA -->
+<div class="space-y-space-sm mb-space-md">
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 mt-0.5 text-primary">
+<span class="material-symbols-outlined text-[20px]">local_hospital</span>
+</div>
+<div class="min-w-0 flex-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold truncate">Sanjay Gandhi Memorial Hospital</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-1.5 mt-0.5">
+<span class="material-symbols-outlined text-[16px] text-primary">near_me</span>
+<span class="font-semibold text-on-surface">1.8 km away</span>
+<span class="text-outline-variant">•</span>
+<span>Approx 6 mins by car via Outer Ring Rd</span>
+</p>
+</div>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-high/60 flex items-center gap-2.5 text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0">medical_services</span>
+<div class="text-caption leading-tight">
+<span class="font-bold text-secondary">Emergency Trauma Unit:</span> Critical patient scheduled for urgent stabilization within the next 45 minutes.
+              </div>
+</div>
+</div>
+<!-- Primary CTA Buttons (side-by-side) -->
+<div class="grid grid-cols-2 gap-space-sm pt-1">
+<button class="h-14 rounded-2xl bg-primary text-on-primary font-headline-sm text-label-lg tracking-wide hover:bg-primary-container transition-all shadow-md active:scale-[0.98] flex items-center justify-center gap-2" id="acceptRequestBtn" type="button">
+<span class="material-symbols-outlined text-[22px]">check_circle</span>
+<span>Accept Request</span>
+</button>
+<button class="h-14 rounded-2xl bg-surface-container text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-all active:scale-[0.98] flex items-center justify-center gap-2" id="declineRequestBtn" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+<span>Decline</span>
+</button>
+</div>
+<!-- Quick Micro-assurance note -->
+<div class="mt-3 flex items-center justify-center gap-1.5 text-caption text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-primary">directions_car</span>
+<span>Priority parking bay pre-reserved at Emergency Gate 2</span>
+</div>
+</div>
+<!-- Donation History & Stats Card -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">history_edu</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Donation History &amp; Stats</h2>
+</div>
+<button class="text-primary font-label-md text-label-md hover:underline flex items-center gap-0.5" type="button">
+<span>View Log</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+<!-- Metrics Bento Grid -->
+<div class="grid grid-cols-3 gap-space-xs mb-space-md">
+<div class="bg-surface-container-low p-space-sm rounded-xl text-center">
+<span class="font-headline-md text-headline-md text-primary font-bold block">4</span>
+<span class="font-caption text-caption text-on-surface-variant font-medium">Lives Saved</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-xl text-center">
+<span class="font-label-lg text-label-lg text-on-surface font-bold block mt-1">14 Oct 2024</span>
+<span class="font-caption text-caption text-on-surface-variant font-medium">Last Donation</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-xl text-center">
+<div class="inline-flex items-center gap-0.5 text-primary font-label-md text-label-md font-bold mt-1">
+<span class="material-symbols-outlined text-[14px]">check</span>
+<span>Cleared</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant font-medium block">Eligible Now</span>
+</div>
+</div>
+<!-- Donor ID & Share Area -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-high/40 rounded-xl">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center text-on-surface shadow-sm font-mono text-caption font-bold">
+                ID
+              </div>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-bold">Donor ID #DL-9042</span>
+<span class="font-caption text-caption text-on-surface-variant block">Universal Blood Registry Token</span>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md shadow-sm transition-all flex items-center gap-1.5" id="shareDonorBtn" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">share</span>
+<span>Share Card</span>
+</button>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN (~60% desktop: 7 cols out of 12) -->
+<div class="col-span-12 lg:col-span-7 flex flex-col gap-space-md">
+<!-- 3D Map Container -->
+<div class="relative w-full h-[620px] rounded-2xl overflow-hidden shadow-lg bg-surface-container-high group">
+<!-- Static/Interactive Map Canvas Target -->
+<div class="w-full h-full bg-cover bg-center" data-location="Rohini Sector 14, Delhi, India" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBEnpLIdcwbxfXL72n2IzD-LgZkWsc41gttuh9VBFpbZ9Fc3EZ0JUFnFvUU8qRZga3IkP2TUf_7wJAoRgYSHh2_Wbj6PVEZMfp8grlNeysRfQ9nUXMPS2zXQGHYbBytOfxuMnEpMWiwdLM3B-Y51mXefFRrOkbmYXVyhMlAju15XNOEnJj_SzUnxAUihGSuegSj-L3ofgQ0eNbd_V-cEwglTQukCWjWKErRUZS2ZCiS')"></div>
+<!-- Tilted 3D Synthetic Vector Scene (Overlay Representation) -->
+<div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-inverse-surface/80 via-transparent to-inverse-surface/30"></div>
+<!-- Interactive 3D Perspective Grid Illusion Elements -->
+<div class="absolute inset-0 pointer-events-none p-space-lg flex flex-col justify-between">
+<!-- Map Floating Top Toolbar -->
+<div class="pointer-events-auto flex items-center justify-between gap-space-sm">
+<!-- Live Routing Chip -->
+<div class="bg-surface-container-lowest/95 backdrop-blur-md px- space-md px-3.5 py-2 rounded-2xl shadow-md flex items-center gap-2.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary animate-ping"></span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold flex items-center gap-1">
+                    Direct Route to Sanjay Gandhi Trauma Ward
+                  </span>
+<span class="font-caption text-caption text-on-surface-variant">Low traffic • Fastest via Bhagwan Mahavir Marg</span>
+</div>
+</div>
+<!-- 2D / 3D Toggle Pill -->
+<div class="bg-surface-container-lowest/95 backdrop-blur-md p-1 rounded-2xl shadow-md flex items-center gap-1">
+<button class="px-3 py-1.5 rounded-xl font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" id="toggle2D" type="button">2D</button>
+<button class="px-3 py-1.5 rounded-xl bg-primary text-on-primary font-label-md text-label-md font-bold shadow-sm" id="toggle3D" type="button">3D View</button>
+</div>
+</div>
+<!-- Central Tactical Markers Representation (Desktop Overlays) -->
+<div class="relative w-full h-72 pointer-events-auto">
+<!-- DONOR LIVE LOCATION (Beacon) -->
+<div class="absolute left-[28%] bottom-[32%] transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+<!-- Multi-layer glowing radar rings -->
+<div class="relative flex items-center justify-center">
+<span class="animate-ping absolute h-14 w-14 rounded-full bg-primary/40"></span>
+<span class="animate-pulse absolute h-9 w-9 rounded-full bg-primary/60"></span>
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-lg border-2 border-surface-container-lowest">
+<span class="material-symbols-outlined text-[16px]">my_location</span>
+</div>
+</div>
+<!-- Location Label Floating Pill -->
+<div class="mt-2 bg-surface-container-lowest/95 backdrop-blur-sm px-2.5 py-1 rounded-lg shadow-md text-center">
+<span class="font-label-md text-label-md text-on-surface font-bold block leading-none">Your Location</span>
+<span class="font-caption text-[11px] text-on-surface-variant">Pocket 2, Sec 14 Rohini</span>
+</div>
+</div>
+<!-- ROUTE TRAJECTORY SVG (Green Route Line with Dash & Glow) -->
+<svg class="absolute inset-0 w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 600 300">
+<defs>
+<lineargradient id="routeGradient" x1="0%" x2="100%" y1="100%" y2="0%">
+<stop offset="0%" stop-color="#00685c" stop-opacity="0.9"></stop>
+<stop offset="50%" stop-color="#008375" stop-opacity="1"></stop>
+<stop offset="100%" stop-color="#00685c" stop-opacity="0.9"></stop>
+</lineargradient>
+<filter height="140%" id="routeGlow" width="140%" x="-20%" y="-20%">
+<fedropshadow dx="0" dy="2" flood-color="#00685c" flood-opacity="0.45" stddeviation="3"></fedropshadow>
+</filter>
+</defs>
+<!-- Route Path -->
+<path d="M 170 190 Q 230 140 330 135 T 460 70" fill="none" filter="url(#routeGlow)" stroke="url(#routeGradient)" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"></path>
+<!-- Animated dash overlay -->
+<path class="animate-[dash_2s_linear_infinite]" d="M 170 190 Q 230 140 330 135 T 460 70" fill="none" stroke="#81f6e3" stroke-dasharray="6,8" stroke-linecap="round" stroke-width="2.5"></path>
+</svg>
+<!-- DESTINATION HOSPITAL MARKER -->
+<div class="absolute right-[22%] top-[12%] transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+<div class="relative flex items-center justify-center">
+<span class="animate-ping absolute h-16 w-16 rounded-full bg-secondary/30"></span>
+<div class="w-10 h-10 rounded-2xl bg-secondary text-on-secondary flex items-center justify-center shadow-xl border-2 border-surface-container-lowest">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">emergency</span>
+</div>
+</div>
+<!-- ETA Badge Callout -->
+<div class="mt-2 bg-surface-container-lowest/95 backdrop-blur-sm p-2 rounded-xl shadow-lg border border-surface-container-high text-left min-w-[190px]">
+<div class="flex items-center justify-between mb-0.5">
+<span class="font-label-md text-label-md text-secondary font-bold">ETA: 6 min drive</span>
+<span class="font-caption text-[11px] text-on-surface-variant font-semibold">1.8 km</span>
+</div>
+<div class="font-body-md text-caption text-on-surface font-semibold truncate">Sanjay Gandhi Memorial</div>
+<div class="flex items-center gap-1 text-[11px] text-primary mt-1 font-bold">
+<span class="material-symbols-outlined text-[13px]">local_parking</span>
+<span>Bay Reserved for Lifesaver</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Map Bar: Legend + Recenter Control -->
+<div class="pointer-events-auto flex items-end justify-between gap-space-md">
+<!-- Collapsible Map Legend -->
+<div class="bg-surface-container-lowest/95 backdrop-blur-md p-space-sm rounded-2xl shadow-md max-w-sm">
+<div class="font-label-md text-label-md text-on-surface font-bold mb-1.5 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">layers</span>
+<span>Live Map Legend</span>
+</div>
+<div class="grid grid-cols-3 gap-2 text-caption">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-primary shrink-0"></span>
+<span class="text-on-surface-variant">Your Pin</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-lg bg-secondary shrink-0"></span>
+<span class="text-on-surface-variant">Hospital</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-4 h-1.5 rounded-full bg-primary shrink-0"></span>
+<span class="text-on-surface-variant">Route</span>
+</div>
+</div>
+</div>
+<!-- Recenter Button -->
+<div class="flex flex-col gap-2">
+<button class="w-12 h-12 rounded-2xl bg-surface-container-lowest/95 backdrop-blur-md text-on-surface hover:bg-surface-container shadow-md flex items-center justify-center transition-all" id="mapCompassBtn" title="Align North" type="button">
+<span class="material-symbols-outlined text-[22px] text-secondary">explore</span>
+</button>
+<button class="w-14 h-14 rounded-2xl bg-surface-container-lowest/95 backdrop-blur-md text-on-surface hover:bg-surface-container shadow-lg flex items-center justify-center transition-all active:scale-95" id="recenterBtn" title="Recenter Map" type="button">
+<span class="material-symbols-outlined text-[26px] text-primary">gps_fixed</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Docked Voice Panel: Talk to HelpMe -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md w-full md:w-auto">
+<div class="relative">
+<button class="w-14 h-14 rounded-2xl bg-primary text-on-primary flex items-center justify-center shadow-lg hover:bg-primary-container transition-all active:scale-95" id="voiceMicTrigger" type="button">
+<span class="material-symbols-outlined text-[28px]">mic</span>
+</button>
+<span class="absolute -top-1 -right-1 flex h-3.5 w-3.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-fixed opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-primary-fixed"></span>
+</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">Talk to HelpMe</span>
+<span class="text-caption px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-medium">Bilingual AI</span>
+</div>
+<p class="font-body-md text-caption text-on-surface-variant">Speak in Hindi, English, Punjabi, or your native dialect</p>
+</div>
+</div>
+<!-- Quick Action Speech Chips -->
+<div class="flex items-center gap-2 w-full md:w-auto justify-end">
+<button class="px-4 py-2.5 rounded-xl bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-2 transition-colors" id="voiceQuickAccept" type="button">
+<span class="material-symbols-outlined text-primary text-[18px]">mic</span>
+<span>Say: “Accept hospital request”</span>
+</button>
+<button class="px-3 py-2.5 rounded-xl bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors font-hindi" id="voiceHindiPrompt" type="button">
+              “स्वीकार करें”
+            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Active Confirmation Banner Modal (Hidden by default, triggered on Accept) -->
+<div class="hidden fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm flex items-center justify-center p-4" id="acceptModal">
+<div class="bg-surface-container-lowest max-w-lg w-full rounded-2xl p-space-lg shadow-2xl animate-[fadeIn_0.2s_ease-out]">
+<div class="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[32px]">task_alt</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Lifesaver Mission Confirmed!</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 mb-space-md">
+          Sanjay Gandhi Memorial Hospital Trauma Desk has been notified of your departure. Turn-by-turn navigation is ready.
+        </p>
+<div class="bg-surface-container-low p-space-md rounded-xl space-y-2 mb-space-lg text-caption">
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Destination</span>
+<span class="font-bold text-on-surface">Emergency Trauma Wing • OT-3</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Designated Doctor</span>
+<span class="font-bold text-on-surface">Dr. A. Verma (On-Duty)</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Emergency Gate Pass</span>
+<span class="font-bold text-primary font-mono">PASS-SG-8812</span>
+</div>
+</div>
+<div class="flex gap-space-sm">
+<button class="flex-1 h-14 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg font-bold hover:bg-primary-container transition-all" id="closeModalBtn" type="button">
+            Launch GPS Directions
+          </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Availability Switcher logic
+  const donorToggleBtn = document.getElementById('donorToggleBtn');
+  const donorToggleThumb = document.getElementById('donorToggleThumb');
+  const availabilityStatusText = document.getElementById('availabilityStatusText');
+
+  let isAvailable = true;
+
+  donorToggleBtn.addEventListener('click', () => {
+    isAvailable = !isAvailable;
+    if (isAvailable) {
+      donorToggleBtn.classList.remove('bg-surface-container-high');
+      donorToggleBtn.classList.add('bg-primary');
+      donorToggleThumb.classList.remove('translate-x-0');
+      donorToggleThumb.classList.add('translate-x-6');
+      availabilityStatusText.innerHTML = '<span class="w-2 h-2 rounded-full bg-primary inline-block"></span> You are on-call • 5km radius active';
+      availabilityStatusText.classList.remove('text-on-surface-variant');
+      availabilityStatusText.classList.add('text-primary');
+    } else {
+      donorToggleBtn.classList.remove('bg-primary');
+      donorToggleBtn.classList.add('bg-surface-container-high');
+      donorToggleThumb.classList.remove('translate-x-6');
+      donorToggleThumb.classList.add('translate-x-0');
+      availabilityStatusText.innerHTML = '<span class="w-2 h-2 rounded-full bg-outline inline-block"></span> Currently paused • Notifications muted';
+      availabilityStatusText.classList.remove('text-primary');
+      availabilityStatusText.classList.add('text-on-surface-variant');
+    }
+  });
+
+  // Modal interactions
+  const acceptRequestBtn = document.getElementById('acceptRequestBtn');
+  const declineRequestBtn = document.getElementById('declineRequestBtn');
+  const acceptModal = document.getElementById('acceptModal');
+  const closeModalBtn = document.getElementById('closeModalBtn');
+  const voiceQuickAccept = document.getElementById('voiceQuickAccept');
+
+  function openConfirmation() {
+    acceptModal.classList.remove('hidden');
+  }
+
+  function closeConfirmation() {
+    acceptModal.classList.add('hidden');
+  }
+
+  acceptRequestBtn.addEventListener('click', openConfirmation);
+  voiceQuickAccept.addEventListener('click', openConfirmation);
+  closeModalBtn.addEventListener('click', closeConfirmation);
+
+  declineRequestBtn.addEventListener('click', () => {
+    const card = acceptRequestBtn.closest('.bg-surface-container-lowest');
+    card.style.opacity = '0.5';
+    card.style.pointerEvents = 'none';
+    setTimeout(() => {
+      card.innerHTML = `
+        <div class="py-space-lg text-center">
+          <span class="material-symbols-outlined text-outline text-[36px] mb-2">remove_done</span>
+          <p class="font-label-lg text-label-lg text-on-surface font-bold">Request Declined</p>
+          <p class="font-caption text-caption text-on-surface-variant mt-1">Re-routed to next eligible B+ donor in Rohini Sector 15.</p>
+        </div>
+      `;
+      card.style.opacity = '1';
+    }, 300);
+  });
+
+  // Share card interaction
+  const shareDonorBtn = document.getElementById('shareDonorBtn');
+  shareDonorBtn.addEventListener('click', () => {
+    if (navigator.share) {
+      navigator.share({
+        title: 'HelpMe Verified Blood Lifesaver',
+        text: 'I am an on-call B+ Whole Blood Donor in Rohini Sector 14 via HelpMe Emergency Network.',
+        url: window.location.href,
+      }).catch(() => {});
+    } else {
+      const originalText = shareDonorBtn.innerHTML;
+      shareDonorBtn.innerHTML = '<span class="material-symbols-outlined text-[16px] text-primary">check</span><span>Link Copied</span>';
+      setTimeout(() => {
+        shareDonorBtn.innerHTML = originalText;
+      }, 2000);
+    }
+  });
+
+  // 2D / 3D Toggle visual state
+  const toggle2D = document.getElementById('toggle2D');
+  const toggle3D = document.getElementById('toggle3D');
+
+  toggle2D.addEventListener('click', () => {
+    toggle2D.className = 'px-3 py-1.5 rounded-xl bg-primary text-on-primary font-label-md text-label-md font-bold shadow-sm';
+    toggle3D.className = 'px-3 py-1.5 rounded-xl font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors';
+  });
+
+  toggle3D.addEventListener('click', () => {
+    toggle3D.className = 'px-3 py-1.5 rounded-xl bg-primary text-on-primary font-label-md text-label-md font-bold shadow-sm';
+    toggle2D.className = 'px-3 py-1.5 rounded-xl font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors';
+  });
+
+  // Voice Mic feedback
+  const voiceMicTrigger = document.getElementById('voiceMicTrigger');
+  voiceMicTrigger.addEventListener('click', () => {
+    voiceMicTrigger.classList.toggle('bg-secondary');
+    voiceMicTrigger.classList.toggle('bg-primary');
+    setTimeout(() => {
+      voiceMicTrigger.classList.remove('bg-secondary');
+      voiceMicTrigger.classList.add('bg-primary');
+    }, 2500);
+  });
+</script></main><footer class="w-full bg-surface-container-low py-space-lg"><div class="w-full px-gutter-desktop max-w-[1440px] mx-auto flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant font-caption text-caption"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-on-surface font-label-md text-label-md"><span class="material-symbols-outlined text-primary text-[18px]">verified_user</span><span>HelpMe National Emergency Network</span></div><span>•</span><span>Integrated with 112 India Emergency Unified Portal</span></div><div class="flex items-center gap-space-lg"><a class="hover:text-on-surface transition-colors" data-path="privacy-data" href="#">Privacy &amp; Data Rights</a><a class="hover:text-on-surface transition-colors" data-path="hospital-directory" href="#">Verified Hospitals</a><a class="hover:text-on-surface transition-colors" data-path="dispatcher-portal" href="#">Dispatcher Desk</a><span class="text-on-surface-variant">© 2025 HelpMe India. All rights reserved.</span></div></div></footer></body></html>

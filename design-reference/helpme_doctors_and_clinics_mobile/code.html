@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<meta content="mobile_tab" name="shell-type"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-lowest": "#ffffff",
+            "on-background": "#111c29",
+            "tertiary-container": "#6b7587",
+            "surface-tint": "#006b5f",
+            "primary": "#00685c",
+            "secondary-fixed-dim": "#ffb4ac",
+            "surface-bright": "#f8f9ff",
+            "surface-container-low": "#eef4ff",
+            "inverse-surface": "#27313e",
+            "on-primary": "#ffffff",
+            "inverse-primary": "#63dac7",
+            "background": "#f8f9ff",
+            "surface-container-high": "#dee9fa",
+            "on-surface-variant": "#3d4946",
+            "on-error-container": "#93000a",
+            "tertiary-fixed": "#d9e3f7",
+            "primary-fixed-dim": "#63dac7",
+            "surface-dim": "#d0dbec",
+            "surface-container": "#e4efff",
+            "surface-variant": "#d8e3f5",
+            "primary-container": "#008375",
+            "on-tertiary-fixed": "#121c2b",
+            "secondary": "#b7131a",
+            "on-secondary-fixed-variant": "#93000d",
+            "on-secondary-fixed": "#410002",
+            "outline-variant": "#bcc9c5",
+            "error-container": "#ffdad6",
+            "on-surface": "#111c29",
+            "surface-container-highest": "#d8e3f5",
+            "error": "#ba1a1a",
+            "primary-fixed": "#81f6e3",
+            "tertiary": "#525c6e",
+            "on-primary-container": "#f4fffb",
+            "inverse-on-surface": "#e9f1ff",
+            "on-primary-fixed": "#00201c",
+            "on-tertiary-fixed-variant": "#3d4758",
+            "secondary-fixed": "#ffdad6",
+            "on-secondary": "#ffffff",
+            "surface": "#f8f9ff",
+            "tertiary-fixed-dim": "#bdc7db",
+            "on-error": "#ffffff",
+            "outline": "#6d7a76",
+            "secondary-container": "#db322f",
+            "on-primary-fixed-variant": "#005047",
+            "on-tertiary": "#ffffff",
+            "on-tertiary-container": "#fefcff",
+            "on-secondary-container": "#fffbff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter": "1rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "margin-desktop": "3rem",
+            "gutter-desktop": "2rem",
+            "space-lg": "1.5rem",
+            "margin": "1rem",
+            "space-md": "1rem",
+            "space-xl": "2.5rem",
+            "margin-tablet": "2rem",
+            "gutter-tablet": "1.5rem"
+          },
+          "fontFamily": {
+            "display-lg": ["Inter"],
+            "body-bold": ["Noto Sans"],
+            "headline-lg": ["Inter"],
+            "caption": ["Noto Sans"],
+            "headline-lg-mobile": ["Inter"],
+            "display-lg-mobile": ["Inter"],
+            "label-lg": ["Inter"],
+            "body-lg": ["Noto Sans"],
+            "label-md": ["Inter"],
+            "headline-sm": ["Inter"],
+            "headline-md": ["Inter"],
+            "body-md": ["Noto Sans"]
+          },
+          "fontSize": {
+            "display-lg": ["48px", { "lineHeight": "56px", "fontWeight": "700" }],
+            "body-bold": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+            "caption": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "34px", "fontWeight": "700" }],
+            "display-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+            "label-lg": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    @layer base {
+      html, body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+      }
+      body {
+        overscroll-behavior-y: none;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      .pt-safe {
+        padding-top: env(safe-area-inset-top, 0px);
+      }
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen">
+<!-- Fixed High-Clarity Top Navigation Bar -->
+<header class="fixed top-0 left-0 right-0 w-full z-50 pt-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_4px_20px_rgba(17,28,41,0.06)]">
+<div class="h-16 px-margin flex items-center justify-between gap-space-sm">
+<!-- HelpMe Brand -->
+<div class="flex items-center gap-space-xs shrink-0">
+<div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[24px]">local_hospital</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm tracking-tight text-primary leading-none">HelpMe</span>
+<span class="font-caption text-[10px] text-secondary font-body-bold tracking-wider uppercase leading-tight">Emergency</span>
+</div>
+</div>
+<!-- Interactive Location Chip, Language Toggle & Instant SOS -->
+<div class="flex items-center gap-space-xs">
+<!-- Location Chip -->
+<button aria-label="Location Rohini, Delhi" class="min-h-[44px] px-2.5 py-1.5 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center gap-1 text-on-surface transition-colors active:scale-95 shrink-0" type="button">
+<span class="material-symbols-outlined text-primary text-[18px]">near_me</span>
+<span class="font-caption text-caption text-on-surface font-body-bold max-w-[76px] truncate">Rohini, DL</span>
+</button>
+<!-- Language Switcher -->
+<button aria-label="Change language" class="min-h-[44px] min-w-[44px] px-2 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center gap-0.5 text-on-surface-variant transition-colors active:scale-95 shrink-0" type="button">
+<span class="material-symbols-outlined text-tertiary text-[17px]">translate</span>
+<span class="font-caption text-caption font-label-md text-on-surface">हिं/EN</span>
+</button>
+<!-- High-Tactile SOS 112 Trigger -->
+<a aria-label="Call emergency 112" class="min-h-[44px] px-3.5 rounded-full bg-secondary text-on-secondary font-label-md text-label-md flex items-center justify-center gap-1 shadow-[0_4px_16px_rgba(183,19,26,0.38)] active:scale-95 transition-transform animate-pulse shrink-0" href="tel:112">
+<span class="material-symbols-outlined text-[18px]">sos</span>
+<span class="font-body-bold tracking-wide">112</span>
+</a>
+</div>
+</div>
+</header>
+<!-- Main Content Slot accommodating Full Map Viewport + Bottom Drag/Scrollable Sheet -->
+<main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface min-h-screen overflow-x-hidden">
+<div class="flex flex-col w-full relative">
+<!-- Top Map Section (~38-40vh Mobile Viewport Ratio) -->
+<section class="relative w-full h-[320px] bg-surface-container-high overflow-hidden select-none">
+<!-- Map Canvas with Live Location Pipeline -->
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500" data-location="Sector 14, Rohini, Delhi" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD4Gi_cS5Y0tDjlwqHjlKjDQegLHbl6kzvJPVh_vUFSvojpmx3pSNVh49H9uRBNbBpuk9nqDPA7xMHSfXI8ePqol26MpciMpHmkbbXBC8Ba1K_uecLPf3GmTpBBUOrG_f_aLO50440hdFJZ79dFfNgErEY1hAUk5VAr8iznXpY_JFhm3n9Dd0HHGArnDxD-fVqcsW-axlvqtkQsWiTKRY-Um7FNXGUGvmXX9-i9YVFp')"></div>
+<!-- 3D Perspective Grid Overlay & Stylized Route Simulation -->
+<div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-surface-container-lowest/60 via-transparent to-surface-container-lowest/20">
+<svg class="w-full h-full" fill="none" viewbox="0 0 390 320" xmlns="http://www.w3.org/2000/svg">
+<!-- Glow backing for navigation line -->
+<path d="M 120 250 C 140 210, 185 195, 205 160 C 220 130, 240 120, 260 88" stroke="#63dac7" stroke-linecap="round" stroke-opacity="0.4" stroke-width="8"></path>
+<!-- Primary Fast Route Vector -->
+<path d="M 120 250 C 140 210, 185 195, 205 160 C 220 130, 240 120, 260 88" stroke="#00685c" stroke-dasharray="6 4" stroke-linecap="round" stroke-width="4"></path>
+<!-- User Current Location (Rohini) -->
+<g transform="translate(120, 250)">
+<circle class="animate-ping" fill="#00685c" fill-opacity="0.25" r="18"></circle>
+<circle fill="#ffffff" r="10"></circle>
+<circle fill="#00685c" r="6"></circle>
+</g>
+<!-- Selected Dr. Ramesh Sharma Marker Target -->
+<g transform="translate(260, 88)">
+<rect class="shadow-lg" fill="#00685c" height="36" rx="18" width="36" x="-18" y="-36"></rect>
+<path d="M 0 0 L -6 -8 L 6 -8 Z" fill="#00685c"></path>
+<circle cx="0" cy="-18" fill="#ffffff" r="8"></circle>
+<path d="M -4 -18 H 4 M 0 -22 V -14" stroke="#00685c" stroke-linecap="round" stroke-width="2.5"></path>
+</g>
+<!-- Other Nearby Clinic Markers -->
+<g opacity="0.85" transform="translate(85, 95)">
+<circle class="shadow-md" fill="#ffffff" r="14"></circle>
+<circle fill="#dee9fa" r="11"></circle>
+<path d="M -3 0 H 3 M 0 -3 V 3" stroke="#3d4946" stroke-linecap="round" stroke-width="2"></path>
+</g>
+<g opacity="0.85" transform="translate(320, 190)">
+<circle class="shadow-md" fill="#ffffff" r="14"></circle>
+<circle fill="#dee9fa" r="11"></circle>
+<path d="M -3 0 H 3 M 0 -3 V 3" stroke="#3d4946" stroke-linecap="round" stroke-width="2"></path>
+</g>
+</svg>
+</div>
+<!-- Map Top Floating Actions (2D/3D & Recenter) -->
+<div class="absolute top-4 left-4 right-4 flex items-center justify-between pointer-events-auto">
+<!-- 2D / 3D Segmented Perspective Switcher -->
+<div class="flex items-center p-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md shadow-md">
+<button class="px-3 py-1 rounded-full font-label-md text-label-md text-on-surface-variant transition-colors" id="view2dBtn" onclick="setPerspective('2d')" type="button">
+          2D
+        </button>
+<button class="px-3 py-1 rounded-full bg-primary font-label-md text-label-md text-on-primary shadow-sm transition-all" id="view3dBtn" onclick="setPerspective('3d')" type="button">
+          3D
+        </button>
+</div>
+<!-- Live GPS Recenter Button -->
+<button aria-label="Recenter current GPS location" class="w-12 h-12 rounded-full bg-surface-container-lowest/95 backdrop-blur-md text-on-surface shadow-md flex items-center justify-center active:scale-95 transition-transform" onclick="pulseRecenter(this)" type="button">
+<span class="material-symbols-outlined text-[24px] text-primary">my_location</span>
+</button>
+</div>
+<!-- Distance Badge on Map -->
+<div class="absolute bottom-16 left-4 bg-surface-container-lowest/95 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-md flex items-center gap-1.5 pointer-events-none">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-md text-label-md text-on-surface font-body-bold">0.9 km • 4 min</span>
+</div>
+<!-- Floating Clinical 'Talk to HelpMe' Voice Pill -->
+<div class="absolute bottom-4 right-4 pointer-events-auto">
+<button aria-label="Voice search doctor or clinic in native language" class="min-h-[48px] px-4 rounded-full bg-primary text-on-primary shadow-xl flex items-center gap-2 active:scale-95 transition-transform" id="voiceAssistBtn" onclick="toggleVoiceSearch()">
+<span class="material-symbols-outlined text-[22px] animate-bounce">mic</span>
+<div class="flex flex-col text-left">
+<span class="font-label-md text-label-md leading-tight">Talk to HelpMe</span>
+<span class="font-caption text-[11px] text-primary-fixed-dim leading-none">बोल कर डॉक्टर ढूंढें</span>
+</div>
+</button>
+</div>
+</section>
+<!-- Bottom Scrollable Sheet (~60% Content Area) -->
+<section class="relative w-full -mt-3 pt-3 px-4 pb-8 bg-surface rounded-t-3xl shadow-[0_-8px_24px_rgba(17,28,41,0.08)] z-10 flex flex-col gap-5">
+<!-- Tactile Drag Handle -->
+<div class="w-full flex items-center justify-center pt-1 pb-1">
+<div class="w-12 h-1.5 rounded-full bg-surface-container-highest"></div>
+</div>
+<!-- Search Input & Direct Mic Action -->
+<div class="w-full relative flex items-center">
+<div class="w-full min-h-[56px] bg-surface-container-lowest rounded-2xl shadow-sm px-4 flex items-center gap-3">
+<span class="material-symbols-outlined text-outline text-[24px]">search</span>
+<input aria-label="Search doctor or clinic" class="w-full bg-transparent font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none" placeholder="Search doctor, clinic or symptoms..." type="text"/>
+<button aria-label="Microphone search" class="w-9 h-9 rounded-xl bg-surface-container-low text-primary flex items-center justify-center active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[20px]">mic</span>
+</button>
+</div>
+</div>
+<!-- Filter Row: Quick Chips & 'Open Now' Switch -->
+<div class="flex flex-col gap-3">
+<!-- Specialty Filter Horizontal Scroll -->
+<div aria-label="Medical specialties" class="flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5" role="tablist">
+<!-- Selected Pill -->
+<button aria-selected="true" class="shrink-0 min-h-[44px] px-4 rounded-full bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm" role="tab">
+<span class="material-symbols-outlined text-[18px]">medical_services</span>
+<span>General</span>
+</button>
+<button aria-selected="false" class="shrink-0 min-h-[44px] px-4 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md flex items-center gap-1.5 shadow-sm active:bg-surface-container" role="tab">
+<span class="material-symbols-outlined text-[18px]">child_care</span>
+<span>Child</span>
+</button>
+<button aria-selected="false" class="shrink-0 min-h-[44px] px-4 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md flex items-center gap-1.5 shadow-sm active:bg-surface-container" role="tab">
+<span class="material-symbols-outlined text-[18px]">female</span>
+<span>Women</span>
+</button>
+<button aria-selected="false" class="shrink-0 min-h-[44px] px-4 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md flex items-center gap-1.5 shadow-sm active:bg-surface-container" role="tab">
+<span class="material-symbols-outlined text-[18px]">cardiology</span>
+<span>Heart</span>
+</button>
+<button aria-selected="false" class="shrink-0 min-h-[44px] px-4 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md flex items-center gap-1.5 shadow-sm active:bg-surface-container" role="tab">
+<span class="material-symbols-outlined text-[18px]">orthopedics</span>
+<span>Bone</span>
+</button>
+<button aria-selected="false" class="shrink-0 min-h-[44px] px-4 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md flex items-center gap-1.5 shadow-sm active:bg-surface-container" role="tab">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+<span>Eye</span>
+</button>
+</div>
+<!-- Open Now Toggle Indicator Row -->
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">verified</span>
+<span class="font-label-md text-label-md text-on-surface">Available verified clinics</span>
+</div>
+<!-- Toggle Button Component -->
+<button aria-checked="true" class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-lowest shadow-sm active:scale-95 transition-all" id="openNowToggle" onclick="toggleOpenNow(this)" role="switch">
+<span class="font-caption text-caption font-body-bold text-primary">Open now</span>
+<span class="w-8 h-5 rounded-full bg-primary flex items-center p-0.5 transition-colors">
+<span class="w-4 h-4 rounded-full bg-on-primary translate-x-3 transition-transform"></span>
+</span>
+</button>
+</div>
+</div>
+<!-- Primary Doctor Spotlight Card (Active Selected Destination) -->
+<article class="w-full bg-surface-container-lowest rounded-2xl p-4 shadow-md flex flex-col gap-4 relative overflow-hidden">
+<!-- Active route subtle backdrop glow -->
+<div class="absolute -right-12 -top-12 w-32 h-32 rounded-full bg-primary/5 pointer-events-none"></div>
+<!-- Top Profile Row -->
+<div class="flex items-start gap-3.5">
+<div class="relative shrink-0">
+<img class="w-16 h-16 rounded-2xl object-cover bg-surface-container" data-alt="Warm and reassuring portrait of Dr. Ramesh Sharma, a senior Indian male physician wearing clinical coat and stethoscope in a well-lit clinic in Rohini Delhi with calm daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdZONUCG4RcL_eygR1HVwu4eu-cfaNzJEzBLA75v5E8NVd3qsDV8hTSIEIqBBmVngYWpr8DNqZkMvAkmVn0dVL2dvizlSImluIxUK9FMueP5uPZEJiQDnTAUq42iMJMjQstYcKEjnygzEtWKHRj_bTRqgSU-IDzV3w4D0NkXwfG9RV2Y6aPCq9hkXv5BASqeySJdPAREbtuLHYxz4OH3bkoP31ii397hY7_6vhayW-"/>
+<span class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[12px]">check</span>
+</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between gap-1">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-body-bold truncate">Dr. Ramesh Sharma</h2>
+<span class="px-2.5 py-0.5 rounded-full bg-primary/10 text-primary font-caption text-caption font-body-bold shrink-0">Selected</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">MD (General Physician)</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-caption text-caption text-primary font-body-bold">Open now</span>
+<span class="text-outline-variant">•</span>
+<span class="font-caption text-caption text-on-surface-variant">Till 9:00 PM</span>
+</div>
+</div>
+</div>
+<!-- Quick Context Stat Matrix -->
+<div class="grid grid-cols-3 gap-2 p-3 rounded-xl bg-surface-container-low text-center">
+<div class="flex flex-col items-center">
+<span class="font-caption text-[11px] text-tertiary">Distance</span>
+<span class="font-label-lg text-label-lg text-on-surface font-body-bold">0.9 km</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-caption text-[11px] text-tertiary">Drive Time</span>
+<span class="font-label-lg text-label-lg text-primary font-body-bold">4 min</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-caption text-[11px] text-tertiary">Consultation</span>
+<span class="font-label-lg text-label-lg text-on-surface font-body-bold">₹300 - 500</span>
+</div>
+</div>
+<!-- Address Readout -->
+<div class="flex items-start gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-outline text-[20px] shrink-0 mt-0.5">location_on</span>
+<span class="font-body-md text-body-md">Shop 12, Ground Floor, Sector 14 Market, Rohini (Opp. Metro Pillar 412)</span>
+</div>
+<!-- High-Tactile Big 56px Action Buttons -->
+<div class="grid grid-cols-2 gap-3 pt-1">
+<!-- Call Clinic Button -->
+<a aria-label="Call clinic of Dr. Ramesh Sharma" class="min-h-[56px] px-3 rounded-xl bg-surface-container-high text-on-surface font-label-lg text-label-lg flex items-center justify-center gap-2 active:scale-95 transition-transform" href="tel:01127568900">
+<span class="material-symbols-outlined text-primary text-[22px]">call</span>
+<span>Call Clinic</span>
+</a>
+<!-- Navigate Button -->
+<button class="min-h-[56px] px-3 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg shadow-md flex items-center justify-center gap-2 active:scale-95 transition-transform" onclick="triggerNavigation('Dr. Ramesh Sharma')" type="button">
+<span class="material-symbols-outlined text-[22px]">directions</span>
+<span>Navigate</span>
+</button>
+</div>
+</article>
+<!-- Section Heading: Other Nearby Doctors -->
+<div class="flex items-center justify-between pt-2">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Other Nearby Doctors</h3>
+<span class="font-caption text-caption text-tertiary">Rohini Sector 13-15</span>
+</div>
+<!-- Doctor Listing 2: Dr. Priya Nair -->
+<article class="w-full bg-surface-container-lowest rounded-2xl p-4 shadow-sm flex flex-col gap-3">
+<div class="flex items-start gap-3">
+<img class="w-14 h-14 rounded-2xl object-cover bg-surface-container shrink-0" data-alt="Portrait of Dr. Priya Nair, an experienced Indian female gynecologist with spectacles smiling warmly in modern medical clinic office." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJn_5ilqAvEolSekF6llU_aRfPANu9DQRsG_lf187741g5wK45BJ1rHYi5c-iDVZRxg_eNR2XwiXQk1-kj7ZIK-wLj3SQFbXnOVlCLXbljyju2VuCVNR6gWYBUqTzuMcaLAFNLHIgK--oWrblz5TR8x_bSlk8x9yhU8abFML4kOpUBdn5OBY2G5fq44i2I0F51IEXKgxdfKM8kLUWEOfrrdHWqRIJulJ_KfEgbQMFh"/>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between gap-1">
+<h4 class="font-label-lg text-label-lg text-on-surface font-body-bold truncate">Dr. Priya Nair</h4>
+<span class="font-label-md text-label-md text-on-surface font-body-bold">₹500</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant truncate">Women / Gynae Care Specialist</p>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-caption text-caption text-primary font-body-bold">Open now</span>
+<span class="text-outline-variant">•</span>
+<span class="font-caption text-caption text-tertiary">1.6 km • 7 min</span>
+</div>
+</div>
+</div>
+<!-- Action Pair -->
+<div class="grid grid-cols-2 gap-3 pt-1">
+<a class="min-h-[56px] px-3 rounded-xl bg-surface-container text-on-surface font-label-lg text-label-lg flex items-center justify-center gap-1.5 active:scale-95 transition-transform" href="tel:01127591144">
+<span class="material-symbols-outlined text-primary text-[20px]">call</span>
+<span>Call</span>
+</a>
+<button class="min-h-[56px] px-3 rounded-xl bg-surface-container-low text-primary font-label-lg text-label-lg flex items-center justify-center gap-1.5 active:scale-95 transition-transform" onclick="triggerNavigation('Dr. Priya Nair')" type="button">
+<span class="material-symbols-outlined text-[20px]">directions</span>
+<span>Navigate</span>
+</button>
+</div>
+</article>
+<!-- Doctor Listing 3: Rohini Child Health Clinic -->
+<article class="w-full bg-surface-container-lowest rounded-2xl p-4 shadow-sm flex flex-col gap-3">
+<div class="flex items-start gap-3">
+<img class="w-14 h-14 rounded-2xl object-cover bg-surface-container shrink-0" data-alt="Clean entrance of a pediatric clinic in Rohini Delhi with child-friendly pastel murals and pediatric examination badges." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFr46MDRy_bZ8hZBaTdhG0aYPb8mbsKMQZDMn9v8WMYyqd7nRp_wo1agH4hIlksZo2tIBnpYczTeIlDQbL79fdfnzgkknHD4jEUwKls96J2Z7_uyPBysmoNEAQOww1J1LSpYQ9v_ZaOEEjc0Qhm9_ZpOBhJRHS0oeLPIw4G5Dbdo-aRnGEOZcqnVw1s0TfnO06WXJ-jXsqaImBqSHB01ygizK2nrBGEVgn4LOu9qlN"/>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between gap-1">
+<h4 class="font-label-lg text-label-lg text-on-surface font-body-bold truncate">Rohini Child Health Clinic</h4>
+<span class="font-label-md text-label-md text-on-surface font-body-bold">₹400</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant truncate">Pediatric &amp; Immunization Hub</p>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-caption text-caption text-primary font-body-bold">Open now</span>
+<span class="text-outline-variant">•</span>
+<span class="font-caption text-caption text-tertiary">1.8 km • 9 min</span>
+</div>
+</div>
+</div>
+<!-- Action Pair -->
+<div class="grid grid-cols-2 gap-3 pt-1">
+<a class="min-h-[56px] px-3 rounded-xl bg-surface-container text-on-surface font-label-lg text-label-lg flex items-center justify-center gap-1.5 active:scale-95 transition-transform" href="tel:01127883322">
+<span class="material-symbols-outlined text-primary text-[20px]">call</span>
+<span>Call</span>
+</a>
+<button class="min-h-[56px] px-3 rounded-xl bg-surface-container-low text-primary font-label-lg text-label-lg flex items-center justify-center gap-1.5 active:scale-95 transition-transform" onclick="triggerNavigation('Rohini Child Health Clinic')" type="button">
+<span class="material-symbols-outlined text-[20px]">directions</span>
+<span>Navigate</span>
+</button>
+</div>
+</article>
+<!-- Emergency Triage Reassurance Banner -->
+<div class="w-full p-4 rounded-2xl bg-surface-container-high/60 flex items-center gap-3 mt-1">
+<span class="material-symbols-outlined text-primary text-[24px]">verified_user</span>
+<p class="font-caption text-caption text-on-surface-variant leading-snug">
+        Need immediate life support? Tap <span class="font-body-bold text-secondary">SOS 112</span> above for government ambulance dispatch without waiting.
+      </p>
+</div>
+</section>
+<!-- Interactive Logic Hook -->
+<script>
+    function setPerspective(mode) {
+      const b2d = document.getElementById('view2dBtn');
+      const b3d = document.getElementById('view3dBtn');
+      if (mode === '3d') {
+        b3d.className = 'px-3 py-1 rounded-full bg-primary font-label-md text-label-md text-on-primary shadow-sm transition-all';
+        b2d.className = 'px-3 py-1 rounded-full font-label-md text-label-md text-on-surface-variant transition-colors';
+      } else {
+        b2d.className = 'px-3 py-1 rounded-full bg-primary font-label-md text-label-md text-on-primary shadow-sm transition-all';
+        b3d.className = 'px-3 py-1 rounded-full font-label-md text-label-md text-on-surface-variant transition-colors';
+      }
+    }
+
+    function pulseRecenter(btn) {
+      btn.classList.add('rotate-45');
+      setTimeout(() => btn.classList.remove('rotate-45'), 300);
+    }
+
+    function toggleOpenNow(el) {
+      const isChecked = el.getAttribute('aria-checked') === 'true';
+      const indicator = el.querySelector('span.w-4');
+      const track = el.querySelector('span.w-8');
+      if (isChecked) {
+        el.setAttribute('aria-checked', 'false');
+        track.classList.replace('bg-primary', 'bg-surface-container-highest');
+        indicator.classList.remove('translate-x-3');
+      } else {
+        el.setAttribute('aria-checked', 'true');
+        track.classList.replace('bg-surface-container-highest', 'bg-primary');
+        indicator.classList.add('translate-x-3');
+      }
+    }
+
+    function toggleVoiceSearch() {
+      const btn = document.getElementById('voiceAssistBtn');
+      btn.classList.toggle('ring-4');
+      btn.classList.toggle('ring-primary-fixed');
+    }
+
+    function triggerNavigation(destination) {
+      if (navigator.vibrate) navigator.vibrate(40);
+      window.open('https://maps.google.com/?q=' + encodeURIComponent(destination + ' Rohini Delhi'), '_blank');
+    }
+  </script>
+</div>
+</main>
+<!-- Fixed High-Clarity Bottom Tab Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 w-full z-50 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-4px_20px_rgba(17,28,41,0.08)]" data-active-classes="text-primary font-body-bold [&amp;_.tab-indicator]:scale-100 [&amp;_.tab-indicator]:opacity-100">
+<div class="flex justify-around items-center h-20 px-space-xs max-w-lg mx-auto">
+<a aria-current="page" class="flex flex-col items-center justify-center min-w-[64px] min-h-[52px] rounded-xl transition-all relative group text-primary font-body-bold [&amp;_.tab-indicator]:scale-100 [&amp;_.tab-indicator]:opacity-100" data-path="home" href="#">
+<span class="tab-indicator absolute -top-1 w-8 h-1 rounded-full bg-primary opacity-0 scale-50 transition-all duration-200"></span>
+<span class="material-symbols-outlined text-[24px] mb-0.5">emergency</span>
+<span class="font-caption text-[12px] leading-tight">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center min-w-[64px] min-h-[52px] rounded-xl text-on-surface-variant hover:text-primary transition-all relative group" data-path="emergency-map" href="#">
+<span class="tab-indicator absolute -top-1 w-8 h-1 rounded-full bg-primary opacity-0 scale-50 transition-all duration-200"></span>
+<span class="material-symbols-outlined text-[24px] mb-0.5">map</span>
+<span class="font-caption text-[12px] leading-tight">Map</span>
+</a>
+<a class="flex flex-col items-center justify-center min-w-[64px] min-h-[52px] rounded-xl text-on-surface-variant hover:text-primary transition-all relative group" data-path="requests" href="#">
+<span class="tab-indicator absolute -top-1 w-8 h-1 rounded-full bg-primary opacity-0 scale-50 transition-all duration-200"></span>
+<div class="relative mb-0.5">
+<span class="material-symbols-outlined text-[24px]">e911_emergency</span>
+<span class="absolute -top-0.5 -right-1 w-2.5 h-2.5 rounded-full bg-secondary ring-2 ring-surface-container-lowest animate-ping"></span>
+<span class="absolute -top-0.5 -right-1 w-2.5 h-2.5 rounded-full bg-secondary ring-2 ring-surface-container-lowest"></span>
+</div>
+<span class="font-caption text-[12px] leading-tight">Requests</span>
+</a>
+<a class="flex flex-col items-center justify-center min-w-[64px] min-h-[52px] rounded-xl text-on-surface-variant hover:text-primary transition-all relative group" data-path="profile" href="#">
+<span class="tab-indicator absolute -top-1 w-8 h-1 rounded-full bg-primary opacity-0 scale-50 transition-all duration-200"></span>
+<span class="material-symbols-outlined text-[24px] mb-0.5">account_circle</span>
+<span class="font-caption text-[12px] leading-tight">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>

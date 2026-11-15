@@ -1,0 +1,91 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 1001,
+      "lat": 28.7383,
+      "lon": 77.0822,
+      "tags": {
+        "amenity": "hospital",
+        "name": "Sample OSM Hospital",
+        "name:hi": "नमूना अस्पताल",
+        "phone": "+91 11 0000 0001",
+        "opening_hours": "24/7",
+        "addr:city": "Delhi",
+        "emergency": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1002,
+      "lat": 28.74,
+      "lon": 77.09,
+      "tags": {
+        "amenity": "pharmacy",
+        "name": "Corner Chemist"
+      }
+    },
+    {
+      "type": "way",
+      "id": 2001,
+      "center": { "lat": 28.735, "lon": 77.08 },
+      "tags": {
+        "amenity": "clinic",
+        "name": "Neighbourhood Clinic",
+        "contact:phone": "+91 90000 11111",
+        "opening_hours": "Mo-Sa 09:00-18:00",
+        "healthcare:speciality": "general"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1003,
+      "lat": 28.736,
+      "lon": 77.085,
+      "tags": {
+        "amenity": "doctors",
+        "name": "Dr. Sharma"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1004,
+      "lat": 28.737,
+      "lon": 77.086,
+      "tags": {
+        "emergency": "ambulance_station",
+        "name": "City Ambulance Stand"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1005,
+      "lat": 28.739,
+      "lon": 77.087,
+      "tags": {
+        "amenity": "blood_bank",
+        "name": "District Blood Bank"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1006,
+      "lat": 28.741,
+      "lon": 77.088,
+      "tags": {
+        "office": "ngo",
+        "name": "Health Aid NGO"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9999,
+      "lat": 28.75,
+      "lon": 77.1,
+      "tags": {
+        "amenity": "cafe",
+        "name": "Should Be Ignored"
+      }
+    }
+  ]
+}

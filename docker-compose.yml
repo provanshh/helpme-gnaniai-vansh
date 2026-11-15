@@ -1,0 +1,14 @@
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    environment:
+      POSTGRES_USER: helpme
+      POSTGRES_PASSWORD: helpme
+      POSTGRES_DB: helpme
+    ports:
+      - "5432:5432"
+    volumes:
+      - helpme_pg:/var/lib/postgresql/data
+
+volumes:
+  helpme_pg:

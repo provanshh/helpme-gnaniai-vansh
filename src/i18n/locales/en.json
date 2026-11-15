@@ -1,0 +1,226 @@
+{
+  "brand": {
+    "name": "HelpMe",
+    "tagline": "Emergency Medical Response",
+    "subtitle": "Help, fast. In your language."
+  },
+  "nav": {
+    "home": "Home",
+    "map": "Map",
+    "requests": "Requests",
+    "profile": "Profile",
+    "changeLanguage": "Change language"
+  },
+  "common": {
+    "continue": "Continue",
+    "cancel": "Cancel",
+    "call": "Call",
+    "navigate": "Navigate",
+    "request": "Request",
+    "openNow": "Open now",
+    "km": "km",
+    "min": "min",
+    "loading": "Loading…",
+    "emptyTitle": "Nothing here yet",
+    "emptyDescription": "Try another filter or check back shortly.",
+    "comingSoon": "This screen is ready for content next.",
+    "call112": "For emergencies call 112"
+  },
+  "onboarding": {
+    "badge": "24/7 Pan-India Dispatch",
+    "title": "Choose your language",
+    "hint": "Select your preferred language or tap mic to speak.",
+    "locationTitle": "Share your location",
+    "locationBody": "Your exact location is shared only with verified ambulances and dispatchers.",
+    "enableGps": "Enable High-Accuracy GPS",
+    "continue": "Continue to HelpMe"
+  },
+  "home": {
+    "eyebrow": "Emergency Intake System",
+    "gpsLive": "Live GPS Signal Active",
+    "gpsPending": "Waiting for GPS accuracy…",
+    "title": "Need medical help right now?",
+    "greeting": "Namaste",
+    "greetingSub": "Need emergency dispatch or medical support?",
+    "services": "Emergency Services",
+    "servicesHint": "Tap to filter the map",
+    "sosTitle": "EMERGENCY SOS",
+    "sosBadge": "1-TAP ALERT",
+    "sosBody": "Dispatches nearest verified ambulance, alerts contacts, and shares your location instantly.",
+    "emergencyLines": "Toll-Free Emergency Direct Lines",
+    "donorCta": "Become a blood donor",
+    "donorSub": "Save lives in your neighbourhood",
+    "talkTitle": "Talk to HelpMe",
+    "talkSub": "Speak in any Indian language"
+  },
+  "services": {
+    "ambulance": "Ambulance",
+    "ambulanceSub": "4–8 mins away",
+    "hospitals": "Hospitals",
+    "hospitalsSub": "Trauma & ICUs",
+    "blood": "Find Blood",
+    "bloodSub": "Rare & donors",
+    "doctors": "Doctors",
+    "doctorsSub": "OPD & Video call",
+    "pharmacy": "Pharmacy",
+    "pharmacySub": "24x7 chemist",
+    "ai": "AI Helper",
+    "aiSub": "First-aid triage",
+    "all": "All Services"
+  },
+  "sos": {
+    "short": "SOS",
+    "aria": "Trigger SOS emergency",
+    "title": "SOS Emergency",
+    "countdown": "Help will be arranged in",
+    "arranging": "Help being arranged",
+    "steps": {
+      "location": "Location shared",
+      "ambulance": "Nearest ambulance notified",
+      "hospital": "Hospital alerted",
+      "contacts": "Emergency contacts SMS"
+    }
+  },
+  "voice": {
+    "idle": "Talk to HelpMe",
+    "listening": "Listening…",
+    "understanding": "Understanding…",
+    "speaking": "Speaking…",
+    "placeholder": "Type your emergency…",
+    "error": "Could not hear you. Try typing instead.",
+    "chipHospitals": "Show hospitals",
+    "chipBlood": "Need B+ blood",
+    "chipAmbulance": "Call ambulance"
+  },
+  "map": {
+    "recenter": "Recenter map",
+    "toggle3d": "Toggle 3D view",
+    "youAreHere": "You are here",
+    "sampleLocation": "GPS unavailable · using fallback location (Rohini, Delhi)",
+    "demoAttribution": "Demo donors & requests only",
+    "osmAttribution": "© OpenStreetMap contributors",
+    "mapboxAttribution": "Mapbox",
+    "freeTiles": "Live street map",
+    "pageHint": "Select a place on the map or in this list to draw the route with distance and ETA."
+  },
+  "places": {
+    "phoneUnavailable": "Phone not available",
+    "hoursNotListed": "Hours not listed",
+    "verified": "Verified",
+    "unverified": "Unverified",
+    "demo": "Demo",
+    "reportWrong": "Report wrong info",
+    "reportSent": "Report sent",
+    "offlineBanner": "Offline, showing limited data",
+    "findingHelp": "Finding help near you...",
+    "widened": "Nearest options are farther away"
+  },
+  "pages": {
+    "hospitals": "Hospitals",
+    "doctors": "Doctors & Clinics",
+    "pharmacy": "Medicine & Pharmacy",
+    "blood": "Find Blood",
+    "ambulance": "Ambulance",
+    "voice": "AI Helper",
+    "donorRegister": "Register as Donor",
+    "donorHome": "Donor Home",
+    "hospitalDash": "Hospital Dashboard",
+    "requests": "Your Requests",
+    "profile": "Profile",
+    "fullMap": "Live Map",
+    "register": "Register provider"
+  },
+  "register": {
+    "name": "Name / organisation",
+    "phone": "Phone (optional)",
+    "address": "Address (optional)",
+    "submit": "Submit for verification",
+    "pending": "Submitted — pending admin approval",
+    "failed": "Could not submit. Is the API running?"
+  },
+  "hospitals": {
+    "search": "Search hospitals, trauma, ICU…",
+    "trauma": "Trauma / ICU",
+    "open24": "Open 24x7",
+    "govt": "Govt"
+  },
+  "doctors": {
+    "search": "Search clinics and specialties…"
+  },
+  "pharmacy": {
+    "search": "Search medicines or pharmacies…",
+    "open24": "Open 24h",
+    "delivery": "Home delivery",
+    "askAi": "Ask AI Helper"
+  },
+  "blood": {
+    "pickGroup": "Select blood group needed",
+    "units": "Units",
+    "findMatches": "Find matches",
+    "matches": "Available matches",
+    "sendRequest": "Send blood request",
+    "tracking": "Delivery in progress",
+    "handoverCode": "Handover code",
+    "requestSent": "Blood request sent (demo)",
+    "donorNearby": "Nearby donor",
+    "demoDonor": "Demo donor",
+    "eligible": "Eligible",
+    "status": {
+      "searching": "Searching donors",
+      "accepted": "Donor accepted",
+      "onWay": "On the way",
+      "handover": "Handover"
+    }
+  },
+  "ambulance": {
+    "requestNearest": "Request nearest ambulance",
+    "dispatched": "Nearest ambulance dispatched",
+    "dispatchedDemo": "Demo ambulance dispatched (simulated)"
+  },
+  "requests": {
+    "active": "Active",
+    "past": "Past"
+  },
+  "profile": {
+    "language": "Language",
+    "languageHint": "Visible on every screen",
+    "becomeDonor": "Become a donor",
+    "donorHome": "Donor home",
+    "hospitalDash": "Hospital dashboard",
+    "demoTag": "Donors are sample data",
+    "demoBody": "Hospitals, clinics, pharmacies, blood banks, ambulances and NGOs come from OpenStreetMap via the HelpMe API. Donors and request progress are demo-seeded and labeled.",
+    "contacts": "Emergency contacts",
+    "registerProvider": "Register ambulance / NGO / doctor",
+    "admin": "Admin approvals",
+    "driver": "Driver GPS page"
+  },
+  "donor": {
+    "stepInfo": "Info",
+    "stepBlood": "Blood",
+    "stepOtp": "OTP",
+    "firstName": "First name",
+    "phone": "Phone (demo)",
+    "otpHint": "Enter any 4 digits (OTP mocked)",
+    "verify": "Verify & register",
+    "registered": "Donor registered (demo)",
+    "availability": "Availability",
+    "available": "Available now",
+    "unavailable": "Unavailable",
+    "activeRequest": "Active request",
+    "accept": "Accept",
+    "decline": "Decline",
+    "accepted": "Request accepted",
+    "declined": "Request declined",
+    "history": "History"
+  },
+  "hospital": {
+    "active": "Active requests",
+    "bloodUnits": "Blood units",
+    "icuBeds": "ICU beds free",
+    "ambulances": "Ambulances free",
+    "useBed": "Assign ICU bed",
+    "toggleAmb": "Toggle ambulance",
+    "incoming": "Incoming requests",
+    "stock": "Blood stock (Demo)"
+  }
+}

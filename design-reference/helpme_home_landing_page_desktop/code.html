@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-surface":"#111c29","secondary-fixed-dim":"#ffb4ac","surface-tint":"#006b5f","outline-variant":"#bcc9c5","primary":"#00685c","surface-variant":"#d8e3f5","on-tertiary-fixed-variant":"#3d4758","on-tertiary-fixed":"#121c2b","on-primary-fixed-variant":"#005047","inverse-primary":"#63dac7","error-container":"#ffdad6","inverse-on-surface":"#e9f1ff","on-background":"#111c29","tertiary-fixed":"#d9e3f7","surface-container":"#e4efff","tertiary":"#525c6e","surface":"#f8f9ff","primary-fixed-dim":"#63dac7","on-secondary-container":"#fffbff","on-error-container":"#93000a","surface-dim":"#d0dbec","surface-container-lowest":"#ffffff","on-tertiary-container":"#fefcff","outline":"#6d7a76","primary-container":"#008375","on-secondary-fixed":"#410002","surface-container-highest":"#d8e3f5","background":"#f8f9ff","on-primary":"#ffffff","on-secondary":"#ffffff","tertiary-fixed-dim":"#bdc7db","primary-fixed":"#81f6e3","secondary-fixed":"#ffdad6","on-tertiary":"#ffffff","on-primary-container":"#f4fffb","secondary-container":"#db322f","on-surface-variant":"#3d4946","surface-container-high":"#dee9fa","on-primary-fixed":"#00201c","surface-bright":"#f8f9ff","secondary":"#b7131a","error":"#ba1a1a","tertiary-container":"#6b7587","on-secondary-fixed-variant":"#93000d","inverse-surface":"#27313e","on-error":"#ffffff","surface-container-low":"#eef4ff"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"margin-tablet":"2rem","gutter-desktop":"2rem","space-xl":"2.5rem","margin":"1rem","space-md":"1rem","gutter":"1rem","space-lg":"1.5rem","margin-desktop":"3rem","gutter-tablet":"1.5rem","space-xs":"0.25rem","space-sm":"0.5rem"},fontFamily:{"headline-sm":["Inter"],"headline-md":["Inter"],"body-lg":["Noto Sans"],"caption":["Noto Sans"],"label-md":["Inter"],"label-lg":["Inter"],"body-bold":["Noto Sans"],"display-lg":["Inter"],"display-lg-mobile":["Inter"],"headline-lg-mobile":["Inter"],"body-md":["Noto Sans"],"headline-lg":["Inter"]},fontSize:{"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"caption":["13px",{"lineHeight":"18px","fontWeight":"500"}],"label-md":["14px",{"lineHeight":"20px","fontWeight":"600"}],"label-lg":["16px",{"lineHeight":"24px","fontWeight":"600"}],"body-bold":["16px",{"lineHeight":"24px","fontWeight":"600"}],"display-lg":["48px",{"lineHeight":"56px","fontWeight":"700"}],"display-lg-mobile":["32px",{"lineHeight":"40px","fontWeight":"700"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","fontWeight":"700"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"40px","fontWeight":"700"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(26,36,51,0.06)]"><div class="h-16 w-full px-gutter-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[24px]">vital_signs</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight tracking-tight">HelpMe</span><span class="font-caption text-caption text-primary tracking-wide leading-none">Emergency Medical Response</span></div></div><nav class="hidden md:flex items-center gap-space-sm bg-surface-container-low px-space-xs py-space-xs rounded-xl" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm font-semibold rounded-lg"><a aria-current="page" class="px-space-md py-space-xs transition-colors bg-primary-container text-on-primary-container font-headline-sm font-semibold rounded-lg" data-path="emergency-dashboard" href="#">Home</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md" data-path="live-fleet-map" href="#">Map</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md relative" data-path="dispatch-requests" href="#">Requests<span class="ml-space-xs px-1.5 py-0.2 bg-secondary text-on-secondary rounded-full font-caption text-[11px] align-middle">3</span></a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md" data-path="responder-profile" href="#">Profile</a></nav><div class="flex items-center gap-space-sm"><div class="hidden lg:flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xs rounded-lg shadow-[0_1px_4px_-1px_rgba(26,36,51,0.04)]"><span class="relative flex h-2.5 w-2.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span></span><span class="material-symbols-outlined text-primary text-[18px]">location_on</span><span class="font-label-md text-label-md text-on-surface">Rohini, Delhi</span></div><button class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[18px] text-tertiary">language</span><span class="font-label-md text-label-md">हिं / EN</span></button><button class="flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-secondary text-on-secondary shadow-[0_8px_20px_-4px_rgba(229,57,53,0.35)] hover:bg-secondary-container transition-all active:scale-95" type="button"><span class="material-symbols-outlined text-[20px]">emergency</span><span class="font-label-lg text-label-lg tracking-wider font-bold">SOS 112</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface flex-1"><div class="flex flex-col w-full">
+<div class="w-full max-w-[1440px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop py-space-md">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT CONTENT COLUMN (40% Desktop: 5/12 cols) -->
+<section class="lg:col-span-5 flex flex-col gap-space-lg">
+<!-- Greeting & Context Header -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption text-primary font-semibold tracking-wider uppercase">Emergency Intake System</span>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1 rounded-full shadow-sm">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span class="font-caption text-[11px] font-semibold text-primary">Live GPS Signal Active</span>
+</div>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Need medical help right now?</h1>
+<!-- Location indicator pill -->
+<div class="inline-flex items-center gap-space-xs bg-surface-container-lowest px-space-md py-space-xs rounded-xl shadow-sm self-start mt-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">my_location</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Rohini, Sector 14, Delhi</span>
+<span class="font-caption text-[12px] text-tertiary">Accuracy ± 4m • Ward 54 North-West</span>
+</div>
+</div>
+</div>
+<!-- High-Impact Red SOS Trigger -->
+<div class="relative bg-surface-container-lowest rounded-2xl p-space-lg shadow-md overflow-hidden">
+<div class="absolute -right-10 -bottom-10 w-44 h-44 rounded-full bg-secondary/5 blur-2xl pointer-events-none"></div>
+<div class="flex flex-col sm:flex-row items-center gap-space-md">
+<!-- Pulsing Concentric Circular Trigger -->
+<div class="relative flex items-center justify-center p-3 shrink-0">
+<div class="absolute inset-0 rounded-full bg-secondary/15 animate-ping duration-1000"></div>
+<div class="absolute -inset-2 rounded-full bg-secondary/10 animate-pulse"></div>
+<button aria-label="Trigger SOS Emergency" class="relative w-20 h-20 rounded-full bg-secondary hover:bg-secondary-container text-on-secondary flex flex-col items-center justify-center shadow-xl active:scale-95 transition-transform duration-200" id="mainSosTrigger" type="button">
+<span class="material-symbols-outlined text-[34px] leading-none" style="font-variation-settings: 'FILL' 1;">emergency</span>
+<span class="font-caption text-[11px] font-bold tracking-widest mt-0.5">SOS</span>
+</button>
+</div>
+<div class="flex flex-col text-center sm:text-left min-w-0">
+<div class="flex items-center justify-center sm:justify-start gap-space-xs mb-1">
+<span class="font-headline-md text-headline-md text-secondary font-bold tracking-tight">EMERGENCY SOS</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-caption text-[11px] font-bold">1-TAP ALERT</span>
+</div>
+<p class="font-caption text-caption text-on-surface-variant leading-relaxed">
+                Dispatches nearest verified ambulance, transmits medical vitals, and triggers alert SMS to your 3 emergency contacts instantly.
+              </p>
+</div>
+</div>
+</div>
+<!-- Quick 6-Services Selection Grid -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-1">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Emergency Services</span>
+<span class="font-caption text-caption text-tertiary">Tap to filter Delhi-NCR map</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-space-sm" id="servicesGrid">
+<!-- Card 1: Ambulance -->
+<button class="service-card group text-left bg-surface-container-lowest p-space-sm rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col gap-space-xs min-h-[96px]" data-filter="ambulance" type="button">
+<div class="w-9 h-9 rounded-lg bg-error-container text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">ambulance</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-primary transition-colors">Ambulance</p>
+<p class="font-caption text-[12px] text-tertiary">4–8 mins away</p>
+</div>
+</button>
+<!-- Card 2: Hospitals -->
+<button class="service-card group text-left bg-surface-container-lowest p-space-sm rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col gap-space-xs min-h-[96px]" data-filter="hospitals" type="button">
+<div class="w-9 h-9 rounded-lg bg-surface-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">local_hospital</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-primary transition-colors">Hospitals</p>
+<p class="font-caption text-[12px] text-tertiary">Trauma &amp; ICUs</p>
+</div>
+</button>
+<!-- Card 3: Blood Banks -->
+<button class="service-card group text-left bg-surface-container-lowest p-space-sm rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col gap-space-xs min-h-[96px]" data-filter="blood" type="button">
+<div class="w-9 h-9 rounded-lg bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">bloodtype</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-primary transition-colors">Find Blood</p>
+<p class="font-caption text-[12px] text-tertiary">Rare &amp; donors</p>
+</div>
+</button>
+<!-- Card 4: Doctors & Clinics -->
+<button class="service-card group text-left bg-surface-container-lowest p-space-sm rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col gap-space-xs min-h-[96px]" data-filter="clinics" type="button">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">medical_services</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-primary transition-colors">Doctors</p>
+<p class="font-caption text-[12px] text-tertiary">OPD &amp; Video call</p>
+</div>
+</button>
+<!-- Card 5: Pharmacy -->
+<button class="service-card group text-left bg-surface-container-lowest p-space-sm rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col gap-space-xs min-h-[96px]" data-filter="pharmacies" type="button">
+<div class="w-9 h-9 rounded-lg bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">prescriptions</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-primary transition-colors">Pharmacy</p>
+<p class="font-caption text-[12px] text-tertiary">24x7 chemist</p>
+</div>
+</button>
+<!-- Card 6: AI Triage Helper -->
+<button class="service-card group text-left bg-surface-container-lowest p-space-sm rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col gap-space-xs min-h-[96px]" data-filter="ai" type="button">
+<div class="w-9 h-9 rounded-lg bg-surface-variant text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">neurology</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-primary transition-colors">AI Helper</p>
+<p class="font-caption text-[12px] text-tertiary">First-aid triage</p>
+</div>
+</button>
+</div>
+</div>
+<!-- Emergency Numbers Fast-Dial Strip -->
+<div class="bg-surface-container-low rounded-xl p-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-1">
+<span class="font-caption text-[12px] font-semibold uppercase tracking-wider text-tertiary">Toll-Free Emergency Direct Lines</span>
+<span class="font-caption text-[11px] text-primary">Direct PSTN dial</span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs">
+<a class="h-12 bg-surface-container-lowest hover:bg-surface-container rounded-lg flex items-center justify-center gap-1.5 shadow-sm transition-colors text-on-surface px-2" href="tel:112">
+<span class="material-symbols-outlined text-secondary text-[18px]">call</span>
+<div class="flex flex-col text-left">
+<span class="font-label-md text-label-md font-bold leading-none">112</span>
+<span class="font-caption text-[10px] text-tertiary leading-none">National</span>
+</div>
+</a>
+<a class="h-12 bg-surface-container-lowest hover:bg-surface-container rounded-lg flex items-center justify-center gap-1.5 shadow-sm transition-colors text-on-surface px-2" href="tel:102">
+<span class="material-symbols-outlined text-primary text-[18px]">call</span>
+<div class="flex flex-col text-left">
+<span class="font-label-md text-label-md font-bold leading-none">102</span>
+<span class="font-caption text-[10px] text-tertiary leading-none">Ambulance</span>
+</div>
+</a>
+<a class="h-12 bg-surface-container-lowest hover:bg-surface-container rounded-lg flex items-center justify-center gap-1.5 shadow-sm transition-colors text-on-surface px-2" href="tel:108">
+<span class="material-symbols-outlined text-primary text-[18px]">call</span>
+<div class="flex flex-col text-left">
+<span class="font-label-md text-label-md font-bold leading-none">108</span>
+<span class="font-caption text-[10px] text-tertiary leading-none">Disaster</span>
+</div>
+</a>
+</div>
+</div>
+<!-- Blood Donor Campaign Card -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-12 h-12 rounded-xl bg-error-container text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[26px]">volunteer_activism</span>
+</div>
+<div class="flex flex-col min-w-0">
+<p class="font-label-lg text-label-lg font-bold text-on-surface truncate">Save a life. Register as a donor.</p>
+<p class="font-caption text-caption text-tertiary leading-snug">Over 42 patients in Delhi-NCR urgently require blood match units today.</p>
+</div>
+</div>
+<button class="h-10 px-space-md rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md font-semibold whitespace-nowrap shadow-sm active:scale-95 transition-all" type="button">
+            Register
+          </button>
+</div>
+</section>
+<!-- RIGHT MAP + VOICE COLUMN (60% Desktop: 7/12 cols) -->
+<section class="lg:col-span-7 flex flex-col gap-space-md relative">
+<!-- Filter Chips Bar & Perspective Controls -->
+<div class="bg-surface-container-lowest rounded-xl p-space-xs shadow-sm flex flex-wrap items-center justify-between gap-space-xs">
+<div class="flex items-center gap-1.5 overflow-x-auto py-1 max-w-full" id="mapFilters">
+<button class="filter-pill px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold shadow-sm transition-colors whitespace-nowrap" data-filter="all" type="button">
+              All Units
+            </button>
+<button class="filter-pill px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors whitespace-nowrap" data-filter="ambulance" type="button">
+              Ambulance (12)
+            </button>
+<button class="filter-pill px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors whitespace-nowrap" data-filter="hospitals" type="button">
+              Hospitals (8)
+            </button>
+<button class="filter-pill px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors whitespace-nowrap" data-filter="blood" type="button">
+              Blood (5)
+            </button>
+<button class="filter-pill px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors whitespace-nowrap" data-filter="pharmacies" type="button">
+              Pharmacy (14)
+            </button>
+</div>
+<div class="flex items-center gap-1 shrink-0 ml-auto">
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container text-on-surface font-caption text-caption font-semibold flex items-center gap-1 hover:bg-surface-container-high transition-colors" id="tiltToggle" type="button">
+<span class="material-symbols-outlined text-[16px]">view_in_ar</span>
+<span>3D</span>
+</button>
+<button aria-label="Recenter live location" class="w-8 h-8 rounded-lg bg-surface-container text-on-surface flex items-center justify-center hover:bg-surface-container-high transition-colors" id="recenterMap" type="button">
+<span class="material-symbols-outlined text-[18px]">near_me</span>
+</button>
+</div>
+</div>
+<!-- 3D Vector Map Container Canvas -->
+<div class="relative w-full h-[580px] bg-surface-dim rounded-2xl overflow-hidden shadow-md" id="mapCanvasContainer">
+<!-- Stylized Delhi-NCR Rohini Vector Map Backing -->
+<div class="absolute inset-0 bg-[#eef3f7] overflow-hidden pointer-events-none select-none">
+<!-- Grid Lines & Street Geometry -->
+<svg class="w-full h-full opacity-60" preserveaspectratio="none" viewbox="0 0 800 600">
+<!-- Water body: Munak Canal / Yamuna feeder -->
+<path d="M -20,120 Q 240,160 480,100 T 820,180" fill="none" stroke="#bdd4eb" stroke-linecap="round" stroke-width="28"></path>
+<path d="M -20,120 Q 240,160 480,100 T 820,180" fill="none" stroke="#d5e5f5" stroke-width="18"></path>
+<!-- Major Ring Roads & Corridors -->
+<path d="M 0,380 L 800,260" stroke="#d1ddec" stroke-width="16"></path>
+<path d="M 0,380 L 800,260" stroke="#ffffff" stroke-width="10"></path>
+<path d="M 320,0 L 520,600" stroke="#d1ddec" stroke-width="14"></path>
+<path d="M 320,0 L 520,600" stroke="#ffffff" stroke-width="8"></path>
+<path d="M 120,600 L 680,0" stroke="#d1ddec" stroke-width="12"></path>
+<path d="M 120,600 L 680,0" stroke="#ffffff" stroke-width="6"></path>
+<!-- Sub sectors Rohini streets -->
+<path d="M 100,200 L 450,200 L 450,450 L 100,450 Z" fill="#f4f8fb" stroke="#e0e8f0" stroke-width="4"></path>
+<path d="M 220,200 L 220,450" stroke="#e0e8f0" stroke-width="2"></path>
+<path d="M 340,200 L 340,450" stroke="#e0e8f0" stroke-width="2"></path>
+<path d="M 100,320 L 450,320" stroke="#e0e8f0" stroke-width="2"></path>
+<path d="M 480,220 L 760,220 L 760,520 L 480,520 Z" fill="#f8fafc" stroke="#e0e8f0" stroke-width="4"></path>
+<path d="M 600,220 L 600,520" stroke="#e0e8f0" stroke-width="2"></path>
+<path d="M 480,360 L 760,360" stroke="#e0e8f0" stroke-width="2"></path>
+<!-- Route Simulation Line from Nearest Ambulance to User -->
+<path class="animate-pulse" d="M 280,180 Q 320,260 390,310" fill="none" id="routeSimulation" stroke="#00685c" stroke-dasharray="8 6" stroke-linecap="round" stroke-width="5"></path>
+</svg>
+<!-- District Label Marks -->
+<span class="absolute top-8 left-12 font-headline-sm text-on-surface-variant/30 font-bold uppercase tracking-widest pointer-events-none">Sector 15 Rohini</span>
+<span class="absolute bottom-20 left-16 font-headline-sm text-on-surface-variant/30 font-bold uppercase tracking-widest pointer-events-none">Outer Ring Road</span>
+<span class="absolute top-24 right-16 font-headline-sm text-on-surface-variant/30 font-bold uppercase tracking-widest pointer-events-none">Pitampura West</span>
+</div>
+<!-- USER LOCATION BEACON (Rohini Sec 14) -->
+<div class="absolute top-[310px] left-[390px] -translate-x-1/2 -translate-y-1/2 z-20 flex flex-col items-center">
+<span class="relative flex h-8 w-8 items-center justify-center">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-60"></span>
+<span class="relative inline-flex rounded-full h-5 w-5 bg-primary border-2 border-surface-container-lowest shadow-lg"></span>
+</span>
+<div class="bg-on-surface text-inverse-on-surface px-2 py-0.5 rounded-full font-caption text-[11px] font-bold shadow-md -mt-1 whitespace-nowrap">
+              You are here
+            </div>
+</div>
+<!-- MARKER 1: Ambulance 07 (Active route simulation) -->
+<div class="map-unit-marker ambulance-marker absolute top-[180px] left-[280px] -translate-x-1/2 -translate-y-1/2 z-20 cursor-pointer group">
+<div class="flex items-center gap-1 bg-surface-container-lowest px-2 py-1 rounded-full shadow-md hover:scale-105 transition-transform">
+<span class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]">ambulance</span>
+</span>
+<div class="flex flex-col pr-1">
+<span class="font-label-md text-[11px] font-bold text-on-surface leading-none">ALS Unit 07</span>
+<span class="font-caption text-[10px] text-secondary font-bold leading-none mt-0.5">4 min away</span>
+</div>
+</div>
+</div>
+<!-- MARKER 2: Ambulance 12 -->
+<div class="map-unit-marker ambulance-marker absolute top-[440px] left-[220px] -translate-x-1/2 -translate-y-1/2 z-20 cursor-pointer group">
+<div class="flex items-center gap-1 bg-surface-container-lowest px-2 py-1 rounded-full shadow-md hover:scale-105 transition-transform">
+<span class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]">ambulance</span>
+</span>
+<span class="font-label-md text-[11px] font-semibold text-on-surface pr-1">BLS 12 • 9 min</span>
+</div>
+</div>
+<!-- MARKER 3: Saroj Super Speciality Hospital -->
+<div class="map-unit-marker hospital-marker absolute top-[140px] left-[520px] -translate-x-1/2 -translate-y-1/2 z-20 cursor-pointer group">
+<div class="flex items-center gap-1.5 bg-surface-container-lowest px-2.5 py-1 rounded-full shadow-md hover:scale-105 transition-transform">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-[12px]">H</span>
+<div class="flex flex-col pr-1">
+<span class="font-label-md text-[11px] font-bold text-on-surface leading-none">Saroj Hospital</span>
+<span class="font-caption text-[10px] text-primary font-semibold leading-none mt-0.5">ICU: 3 beds free</span>
+</div>
+</div>
+</div>
+<!-- MARKER 4: Fortis Pitampura -->
+<div class="map-unit-marker hospital-marker absolute top-[430px] left-[610px] -translate-x-1/2 -translate-y-1/2 z-20 cursor-pointer group">
+<div class="flex items-center gap-1 bg-surface-container-lowest px-2 py-1 rounded-full shadow-md hover:scale-105 transition-transform">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-[12px]">H</span>
+<span class="font-label-md text-[11px] font-semibold text-on-surface pr-1">Fortis Trauma Center</span>
+</div>
+</div>
+<!-- MARKER 5: Blood Center -->
+<div class="map-unit-marker blood-marker absolute top-[280px] left-[620px] -translate-x-1/2 -translate-y-1/2 z-20 cursor-pointer group">
+<div class="flex items-center gap-1 bg-surface-container-lowest px-2.5 py-1 rounded-full shadow-md hover:scale-105 transition-transform">
+<span class="w-6 h-6 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]">bloodtype</span>
+</span>
+<div class="flex flex-col pr-1">
+<span class="font-label-md text-[11px] font-bold text-on-surface leading-none">Rotary Blood Bank</span>
+<span class="font-caption text-[10px] text-secondary font-bold leading-none mt-0.5">O+, B+, A- stocked</span>
+</div>
+</div>
+</div>
+<!-- MARKER 6: 24x7 Apollo Pharmacy -->
+<div class="map-unit-marker pharmacy-marker absolute top-[360px] left-[170px] -translate-x-1/2 -translate-y-1/2 z-20 cursor-pointer group">
+<div class="flex items-center gap-1 bg-surface-container-lowest px-2 py-1 rounded-full shadow-md hover:scale-105 transition-transform">
+<span class="w-6 h-6 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]">local_pharmacy</span>
+</span>
+<span class="font-label-md text-[11px] font-semibold text-on-surface pr-1">Apollo 24x7 Chemist</span>
+</div>
+</div>
+<!-- MARKER 7: Max Clinic OPD -->
+<div class="map-unit-marker clinic-marker absolute top-[220px] left-[420px] -translate-x-1/2 -translate-y-1/2 z-20 cursor-pointer group">
+<div class="flex items-center gap-1 bg-surface-container-lowest px-2 py-1 rounded-full shadow-md hover:scale-105 transition-transform">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]">stethoscope</span>
+</span>
+<span class="font-label-md text-[11px] font-semibold text-on-surface pr-1">Max Day Clinic</span>
+</div>
+</div>
+<!-- Map Legend Bar (Bottom-Left overlay) -->
+<div class="absolute bottom-3 left-3 z-30 bg-surface-container-lowest/90 backdrop-blur-md px-3 py-2 rounded-xl shadow-md flex items-center gap-3">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-caption text-[11px] text-on-surface font-medium">Ambulance</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span class="font-caption text-[11px] text-on-surface font-medium">Hospital</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed"></span>
+<span class="font-caption text-[11px] text-on-surface font-medium">Blood</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-fixed"></span>
+<span class="font-caption text-[11px] text-on-surface font-medium">Pharmacy</span>
+</div>
+</div>
+<!-- DOCKED VOICE ASSISTANT OVERLAY ("Talk to HelpMe") -->
+<aside class="absolute top-3 right-3 bottom-14 w-80 max-w-[calc(100%-24px)] z-30 bg-surface-container-lowest/95 backdrop-blur-lg rounded-2xl shadow-xl p-space-md flex flex-col justify-between" id="voiceWidget">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[20px] animate-pulse">mic</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold leading-none">Talk to HelpMe</span>
+<span class="font-caption text-[11px] text-primary font-medium mt-0.5">Indian Voice AI triage</span>
+</div>
+</div>
+<button class="text-tertiary hover:text-on-surface p-1 rounded-lg" id="minimizeVoice" type="button">
+<span class="material-symbols-outlined text-[18px]">horizontal_rule</span>
+</button>
+</div>
+<p class="font-caption text-[12px] text-tertiary mt-1">
+                Speak naturally in your mother tongue: हिन्दी, English, தமிழ், বাংলা, తెలుగు, मराठी...
+              </p>
+</div>
+<!-- Voice Sound Wave Frequency Simulation -->
+<div class="my-space-xs p-space-sm rounded-xl bg-surface-container-low flex flex-col items-center justify-center gap-2">
+<div class="flex items-center justify-center gap-1 h-9 w-full">
+<span class="w-1 bg-primary rounded-full animate-bounce h-3"></span>
+<span class="w-1 bg-primary rounded-full animate-bounce h-6 [animation-delay:0.15s]"></span>
+<span class="w-1 bg-primary rounded-full animate-bounce h-8 [animation-delay:0.3s]"></span>
+<span class="w-1 bg-primary rounded-full animate-bounce h-5 [animation-delay:0.45s]"></span>
+<span class="w-1 bg-primary rounded-full animate-bounce h-7 [animation-delay:0.2s]"></span>
+<span class="w-1 bg-primary rounded-full animate-bounce h-4 [animation-delay:0.35s]"></span>
+<span class="w-1 bg-primary rounded-full animate-bounce h-2 [animation-delay:0.5s]"></span>
+</div>
+<span class="font-caption text-[11px] font-semibold text-primary">Listening... say what happened</span>
+</div>
+<!-- Fast Prompt Suggestions -->
+<div class="flex flex-col gap-1.5">
+<span class="font-caption text-[11px] text-tertiary font-medium">Common Emergency Commands:</span>
+<button class="voice-prompt text-left px-2.5 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-caption text-[12px]" type="button">
+                “Nearest O+ blood bank in Rohini”
+              </button>
+<button class="voice-prompt text-left px-2.5 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-caption text-[12px]" type="button">
+                “Call ambulance to Sector 14 market”
+              </button>
+<button class="voice-prompt text-left px-2.5 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-caption text-[12px]" type="button">
+                “Emergency ICU trauma hospital near me”
+              </button>
+</div>
+<!-- Voice Control Button -->
+<button class="w-full h-11 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-2 shadow-sm transition-all mt-2 active:scale-95" id="startVoiceInput" type="button">
+<span class="material-symbols-outlined text-[20px]">graphic_eq</span>
+<span>Tap to Speak / बोलना शुरू करें</span>
+</button>
+</aside>
+</div>
+</section>
+</div>
+</div>
+</div>
+<script>
+  (function initHelpMeHome() {
+    // Interactive map filters
+    const filterPills = document.querySelectorAll('.filter-pill');
+    const serviceCards = document.querySelectorAll('.service-card');
+    const markers = document.querySelectorAll('.map-unit-marker');
+
+    function applyFilter(category) {
+      // Update filter pills active style
+      filterPills.forEach(pill => {
+        if (pill.dataset.filter === category) {
+          pill.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+          pill.classList.add('bg-primary', 'text-on-primary', 'font-semibold', 'shadow-sm');
+        } else {
+          pill.classList.remove('bg-primary', 'text-on-primary', 'font-semibold', 'shadow-sm');
+          pill.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+        }
+      });
+
+      // Show/hide markers based on category
+      markers.forEach(marker => {
+        if (category === 'all') {
+          marker.classList.remove('hidden');
+        } else if (category === 'ambulance' && marker.classList.contains('ambulance-marker')) {
+          marker.classList.remove('hidden');
+        } else if (category === 'hospitals' && marker.classList.contains('hospital-marker')) {
+          marker.classList.remove('hidden');
+        } else if (category === 'blood' && marker.classList.contains('blood-marker')) {
+          marker.classList.remove('hidden');
+        } else if (category === 'pharmacies' && marker.classList.contains('pharmacy-marker')) {
+          marker.classList.remove('hidden');
+        } else if (category === 'clinics' && marker.classList.contains('clinic-marker')) {
+          marker.classList.remove('hidden');
+        } else {
+          marker.classList.add('hidden');
+        }
+      });
+    }
+
+    filterPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        applyFilter(pill.dataset.filter);
+      });
+    });
+
+    serviceCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const filter = card.dataset.filter;
+        applyFilter(filter);
+      });
+    });
+
+    // 3D tilt perspective toggle simulation
+    const tiltBtn = document.getElementById('tiltToggle');
+    const mapContainer = document.getElementById('mapCanvasContainer');
+    let is3D = false;
+
+    if (tiltBtn && mapContainer) {
+      tiltBtn.addEventListener('click', () => {
+        is3D = !is3D;
+        if (is3D) {
+          mapContainer.style.transform = 'perspective(900px) rotateX(16deg)';
+          mapContainer.style.transition = 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
+          tiltBtn.classList.add('bg-primary', 'text-on-primary');
+          tiltBtn.classList.remove('bg-surface-container', 'text-on-surface');
+        } else {
+          mapContainer.style.transform = 'none';
+          tiltBtn.classList.remove('bg-primary', 'text-on-primary');
+          tiltBtn.classList.add('bg-surface-container', 'text-on-surface');
+        }
+      });
+    }
+
+    // Voice prompt pill fill
+    const voicePrompts = document.querySelectorAll('.voice-prompt');
+    const voiceBtn = document.getElementById('startVoiceInput');
+    voicePrompts.forEach(p => {
+      p.addEventListener('click', () => {
+        if (voiceBtn) {
+          voiceBtn.innerHTML = `<span class="material-symbols-outlined text-[20px]">check_circle</span><span>Query: "${p.innerText.replace(/"/g, '')}"</span>`;
+        }
+      });
+    });
+
+    // SOS quick click simulation alert
+    const sosBtn = document.getElementById('mainSosTrigger');
+    if (sosBtn) {
+      sosBtn.addEventListener('click', () => {
+        sosBtn.classList.add('scale-110');
+        setTimeout(() => sosBtn.classList.remove('scale-110'), 250);
+      });
+    }
+  })();
+</script></main></body></html>
