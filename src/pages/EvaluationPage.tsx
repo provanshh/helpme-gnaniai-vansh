@@ -22,7 +22,8 @@ import {
 } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { Link, NavLink } from 'react-router-dom';
 import { DEMO_VIDEO_URL, loadMermaid } from '@/components/evaluation/EvaluationModal';
 
 export const GITHUB_URL = 'https://github.com/provanshh/helpme-gnaniai-vansh';
@@ -262,6 +263,17 @@ function DiagramModal({ d, onClose }: { d: (typeof DIAGRAMS)[number] | null; onC
 
 /* ------------------------------------------------------------ content */
 
+const NAV = [
+  { to: '/', labelKey: 'nav.home', fallback: 'Home' },
+  { to: '/hospitals', labelKey: 'services.hospitals', fallback: 'Hospitals' },
+  { to: '/blood', labelKey: 'services.blood', fallback: 'Find Blood' },
+  { to: '/ambulance', labelKey: 'services.ambulance', fallback: 'Ambulance' },
+  { to: '/voice', labelKey: 'services.ai', fallback: 'AI Helper' },
+  { to: '/map', labelKey: 'nav.map', fallback: 'Map' },
+  { to: '/whatsapp', labelKey: 'nav.whatsapp', fallback: 'WhatsApp' },
+  { to: '/evaluation', labelKey: 'nav.evaluation', fallback: 'Evaluation' },
+] as const;
+
 const IMPACT = [
   { n: '474', l: 'road-crash deaths every day', s: 'MoRTH 2023' },
   { n: '~50k', l: 'deaths/yr preventable with timely care', s: 'AIIMS-led committee' },
@@ -304,6 +316,7 @@ function GithubMark() {
 /* ------------------------------------------------------------ page */
 
 export function EvaluationPage() {
+  const { t } = useTranslation();
   const [open, setOpen] = useState<(typeof DIAGRAMS)[number] | null>(null);
   const embed = DEMO_VIDEO_URL ? toEmbed(DEMO_VIDEO_URL) : null;
 
@@ -313,38 +326,55 @@ export function EvaluationPage() {
 
   return (
     <div className="flex min-h-dvh flex-col gap-3 bg-bg p-3 text-text lg:h-dvh lg:overflow-hidden xl:gap-4 xl:p-4">
-      {/* ── header */}
-      <header className="flex shrink-0 flex-wrap items-center gap-3 rounded-3xl bg-primary px-5 py-3 text-white">
-        <div className="grid size-11 place-items-center rounded-full bg-accent text-primary-dark">
-          <HeartPulse className="size-6" />
-        </div>
-        <div className="min-w-0 flex-1">
-          <h1 className="font-[family-name:var(--font-display)] text-xl leading-tight font-semibold xl:text-2xl">
-            HelpMe <span className="font-normal text-white/60">·</span>{' '}
-            <span className="text-highlight">Evaluation</span>
-          </h1>
-          <p className="truncate text-[12px] text-white/70 xl:text-[13px]">
-            Emergency medical help for India, one sentence away · Gnani AI Great Indian AI Internship Challenge
-          </p>
-        </div>
-        <div className="hidden text-right text-[12px] leading-tight md:block">
-          <p className="font-semibold">Vansh Singla</p>
-          <p className="text-white/70">vs.vansh19@gmail.com</p>
-        </div>
-        <a
-          href={GITHUB_URL}
-          target="_blank"
-          rel="noreferrer"
-          className="flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-bold text-primary-dark hover:bg-accent-soft"
-        >
-          <GithubMark /> GitHub
-        </a>
-        <Link
-          to="/"
-          className="flex items-center gap-2 rounded-full bg-accent px-4 py-2 text-sm font-bold text-on-accent hover:bg-accent-dark"
-        >
-          Open app <ArrowRight className="size-4" />
+      {/* ── header (same style as the app's top bar) */}
+      <header className="flex h-14 shrink-0 items-center justify-between gap-2 rounded-full bg-primary pr-2 pl-2 shadow-[var(--shadow-voice)]">
+        <Link to="/" className="flex shrink-0 items-center gap-2">
+          <span className="flex size-10 items-center justify-center rounded-full bg-accent text-primary-dark ring-2 ring-white/20">
+            <HeartPulse className="size-5" strokeWidth={2.25} />
+          </span>
+          <span className="font-[family-name:var(--font-display)] text-xl font-semibold tracking-tight text-white">
+            HelpMe<span className="text-accent">.</span>
+          </span>
         </Link>
+
+        <nav className="hidden items-center gap-0.5 lg:flex">
+          {NAV.map((item) => (
+            <NavLink
+              key={item.to}
+              to={item.to}
+              end={item.to === '/'}
+              className={({ isActive }) =>
+                `relative rounded-full px-2.5 py-1.5 text-[14px] font-medium whitespace-nowrap transition-colors xl:px-3 xl:text-[15px] ${
+                  isActive ? 'text-accent' : 'text-white/80 hover:text-white'
+                }`
+              }
+            >
+              {({ isActive }) => (
+                <>
+                  {t(item.labelKey, item.fallback)}
+                  {isActive && <span className="absolute inset-x-3 -bottom-0.5 h-0.5 rounded-full bg-accent" />}
+                </>
+              )}
+            </NavLink>
+          ))}
+        </nav>
+
+        <div className="flex shrink-0 items-center gap-1.5">
+          <a
+            href={GITHUB_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex h-10 items-center gap-2 rounded-full bg-white px-4 text-[14px] font-semibold text-primary-dark transition-colors hover:bg-accent-soft"
+          >
+            <GithubMark /> GitHub
+          </a>
+          <Link
+            to="/sos"
+            className="inline-flex h-10 items-center gap-1.5 rounded-full bg-sos px-4 text-[14px] font-bold text-on-sos shadow-[var(--shadow-sos)] transition-transform active:scale-95"
+          >
+            <Siren className="size-4" /> SOS
+          </Link>
+        </div>
       </header>
 
       {/* ── body grid */}
@@ -387,12 +417,12 @@ export function EvaluationPage() {
           </Card>
           <Card className="flex flex-1 flex-col !bg-primary-dark text-white">
             <Eyebrow light>Impact</Eyebrow>
-            <div className="grid min-h-0 flex-1 grid-cols-2 gap-2.5 [@media(max-height:920px)]:grid-cols-4 [@media(max-height:920px)]:gap-2">
+            <div className="grid min-h-0 flex-1 grid-cols-2 gap-2 [@media(max-height:920px)]:grid-cols-4 [@media(max-height:920px)]:gap-1.5">
               {IMPACT.map((s) => (
-                <div key={s.n} className="flex flex-col justify-center rounded-2xl bg-white/8 px-3.5 py-2.5 [@media(max-height:920px)]:px-2.5">
-                  <p className="font-[family-name:var(--font-display)] text-2xl leading-none font-semibold text-accent xl:text-[28px] [@media(max-height:920px)]:text-xl">{s.n}</p>
-                  <p className="mt-1.5 text-[12.5px] leading-snug text-white/90 [@media(max-height:920px)]:text-[11px]">{s.l}</p>
-                  <p className="mt-1 text-[10.5px] text-white/50 [@media(max-height:920px)]:hidden">{s.s}</p>
+                <div key={s.n} className="flex min-w-0 flex-col justify-center rounded-2xl bg-white/8 px-3 py-2 [@media(max-height:920px)]:px-2 [@media(max-height:920px)]:py-1.5">
+                  <p className="font-[family-name:var(--font-display)] text-xl leading-none font-semibold text-accent xl:text-2xl [@media(max-height:920px)]:text-lg">{s.n}</p>
+                  <p className="mt-1 text-[11.5px] leading-snug text-white/85 [@media(max-height:920px)]:text-[10.5px] [@media(max-height:920px)]:leading-tight">{s.l}</p>
+                  <p className="mt-0.5 text-[10px] text-white/50 [@media(max-height:920px)]:hidden">{s.s}</p>
                 </div>
               ))}
             </div>
@@ -473,14 +503,14 @@ export function EvaluationPage() {
                 <button
                   key={d.id}
                   onClick={() => setOpen(d)}
-                  className="group flex h-12 shrink-0 items-center gap-3 rounded-2xl border border-border bg-surface-low pr-3 pl-1.5 text-left transition hover:-translate-y-0.5 hover:border-accent hover:bg-accent-soft [@media(max-height:920px)]:h-10 [@media(max-height:920px)]:gap-2 [@media(max-height:920px)]:pl-1"
+                  className="group flex h-11 min-w-0 shrink-0 items-center gap-2.5 rounded-xl border border-border bg-surface-low pr-2.5 pl-1.5 text-left transition hover:-translate-y-0.5 hover:border-accent hover:bg-accent-soft [@media(max-height:920px)]:h-9 [@media(max-height:920px)]:gap-2 [@media(max-height:920px)]:pl-1"
                 >
-                  <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-primary text-accent [@media(max-height:920px)]:size-8">
+                  <span className="grid size-8 shrink-0 place-items-center rounded-lg bg-primary text-accent [@media(max-height:920px)]:size-7">
                     <d.icon className="size-4" />
                   </span>
                   <span className="min-w-0 flex-1">
-                    <b className="block truncate text-[14px] leading-tight font-semibold text-text [@media(max-height:920px)]:text-[13px]">{d.title}</b>
-                    <span className="block truncate text-[12px] leading-tight text-text-secondary [@media(max-height:920px)]:hidden">{d.sub}</span>
+                    <b className="block truncate text-[13px] leading-tight font-semibold text-text [@media(max-height:920px)]:text-[12px]">{d.title}</b>
+                    <span className="block truncate text-[11px] leading-tight text-text-secondary [@media(max-height:920px)]:hidden">{d.sub}</span>
                   </span>
                   <ArrowRight className="size-4 shrink-0 text-outline transition group-hover:translate-x-0.5 group-hover:text-accent-dark [@media(max-height:920px)]:hidden" />
                 </button>
@@ -498,7 +528,10 @@ export function EvaluationPage() {
               {s}
             </span>
           ))}
-          <span className="ml-auto flex items-center gap-3 text-[11px] text-text-secondary [@media(max-height:920px)]:hidden">
+          <span className="ml-auto text-[12px] text-text-secondary">
+            Built by <b className="text-text">Vansh Singla</b> · vs.vansh19@gmail.com
+          </span>
+          <span className="flex items-center gap-3 text-[11px] text-text-secondary [@media(max-height:920px)]:hidden">
             <span className="flex items-center gap-1">
               <Users className="size-3.5" /> Donors, ambulances & WhatsApp are demo simulations
             </span>
