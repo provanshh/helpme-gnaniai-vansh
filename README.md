@@ -13,6 +13,8 @@ Built by **Vansh Singla** ([vs.vansh19@gmail.com](mailto:vs.vansh19@gmail.com)) 
 
 `#GnaniAI` `#GreatIndianAIInternshipChallenge`
 
+**🎯 Judges: open [`/evaluation`](http://localhost:5173/evaluation): one screen with the demo video, impact, Gnani usage and every workflow diagram.**
+
 </div>
 
 ---
@@ -291,7 +293,7 @@ flowchart LR
 ## 9. Project structure
 
 ```
-gnani-ai/
+helpme-gnaniai-vansh/
 ├── server/                         # Express API
 │   ├── src/
 │   │   ├── routes/voice.ts         # ⭐ Gnani proxy: /status, /stt (Prisma), /tts (Timbre)
@@ -350,8 +352,8 @@ gnani-ai/
 **Requirements:** Node 20+ and npm. Docker is only needed for the optional PostGIS database.
 
 ```bash
-git clone https://github.com/provanshh/gnani-ai.git
-cd gnani-ai
+git clone https://github.com/provanshh/helpme-gnaniai-vansh.git
+cd helpme-gnaniai-vansh
 
 npm install
 npm install --prefix server

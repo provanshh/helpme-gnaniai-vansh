@@ -97,7 +97,7 @@ const FLOW = `flowchart TD
 
 type MermaidApi = { initialize: (c: object) => void; render: (id: string, src: string) => Promise<{ svg: string }> };
 let mermaidPromise: Promise<MermaidApi> | null = null;
-function loadMermaid() {
+export function loadMermaid() {
   if (!mermaidPromise) {
     const url = 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
     mermaidPromise = import(/* @vite-ignore */ url).then((m: { default: MermaidApi }) => {

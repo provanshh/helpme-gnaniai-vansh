@@ -10,6 +10,7 @@ import { DoctorsPage } from '@/pages/DoctorsPage';
 import { DonorHomePage } from '@/pages/DonorHomePage';
 import { DonorRegisterPage } from '@/pages/DonorRegisterPage';
 import { DriverPage } from '@/pages/DriverPage';
+import { EvaluationPage } from '@/pages/EvaluationPage';
 import { HomePage } from '@/pages/HomePage';
 import { HospitalDashboardPage } from '@/pages/HospitalDashboardPage';
 import { HospitalsPage } from '@/pages/HospitalsPage';
@@ -35,6 +36,7 @@ export function AppRouter() {
       <Route path="/onboarding" element={<OnboardingPage />} />
       <Route path="/driver" element={<DriverPage />} />
       <Route path="/admin" element={<AdminPage />} />
+      <Route path="/evaluation" element={<EvaluationPage />} />
       <Route
         element={
           <RequireOnboarded>
