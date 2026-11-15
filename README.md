@@ -13,6 +13,10 @@ Built by **Vansh Singla** ([vs.vansh19@gmail.com](mailto:vs.vansh19@gmail.com)) 
 
 `#GnaniAI` `#GreatIndianAIInternshipChallenge`
 
+### ▶️ [Watch the 3-minute demo video](https://www.youtube.com/watch?v=lexpPCbPF2A)
+
+[![HelpMe demo video](https://img.youtube.com/vi/lexpPCbPF2A/maxresdefault.jpg)](https://www.youtube.com/watch?v=lexpPCbPF2A)
+
 **🎯 Judges: open [`/evaluation`](http://localhost:5173/evaluation): one screen with the demo video, impact, Gnani usage and every workflow diagram.**
 
 </div>

@@ -6,7 +6,7 @@ import { cn } from '@/lib/cn';
 import { IMAGES } from '@/lib/images';
 
 /** ▶ Paste your YouTube demo link here, e.g. 'https://youtu.be/XXXXXXXXXXX' */
-export const DEMO_VIDEO_URL = '';
+export const DEMO_VIDEO_URL = 'https://www.youtube.com/watch?v=lexpPCbPF2A';
 
 type Tab = 'video' | 'workflow' | 'details';
 
