@@ -325,7 +325,7 @@ export function EvaluationPage() {
   }, []);
 
   return (
-    <div className="flex min-h-dvh flex-col gap-3 bg-bg p-3 text-text lg:h-dvh lg:overflow-hidden xl:gap-4 xl:p-4">
+    <div className="eval-scroll flex h-dvh flex-col gap-3 overflow-y-auto bg-bg p-3 text-text xl:gap-4 xl:p-4">
       {/* ── header (same style as the app's top bar) */}
       <header className="flex h-14 shrink-0 items-center justify-between gap-2 rounded-full bg-primary pr-2 pl-2 shadow-[var(--shadow-voice)]">
         <Link to="/" className="flex shrink-0 items-center gap-2">
@@ -378,7 +378,7 @@ export function EvaluationPage() {
       </header>
 
       {/* ── body grid */}
-      <main className="grid min-h-0 flex-1 gap-3 lg:grid-cols-12 lg:grid-rows-[minmax(0,1fr)_auto] xl:gap-4">
+      <main className="grid flex-1 shrink-0 gap-3 lg:min-h-[820px] lg:grid-cols-12 lg:grid-rows-[minmax(0,1fr)_auto] xl:gap-4">
         {/* video + impact */}
         <div className="flex min-h-0 flex-col gap-3 lg:col-span-5 xl:gap-4">
           <Card className="shrink-0">
@@ -417,12 +417,12 @@ export function EvaluationPage() {
           </Card>
           <Card className="flex flex-1 flex-col !bg-primary-dark text-white">
             <Eyebrow light>Impact</Eyebrow>
-            <div className="grid min-h-0 flex-1 grid-cols-2 gap-2 [@media(max-height:920px)]:grid-cols-4 [@media(max-height:920px)]:gap-1.5">
+            <div className="grid min-h-0 flex-1 grid-cols-2 gap-2">
               {IMPACT.map((s) => (
-                <div key={s.n} className="flex min-w-0 flex-col justify-center rounded-2xl bg-white/8 px-3 py-2 [@media(max-height:920px)]:px-2 [@media(max-height:920px)]:py-1.5">
-                  <p className="font-[family-name:var(--font-display)] text-xl leading-none font-semibold text-accent xl:text-2xl [@media(max-height:920px)]:text-lg">{s.n}</p>
-                  <p className="mt-1 text-[11.5px] leading-snug text-white/85 [@media(max-height:920px)]:text-[10.5px] [@media(max-height:920px)]:leading-tight">{s.l}</p>
-                  <p className="mt-0.5 text-[10px] text-white/50 [@media(max-height:920px)]:hidden">{s.s}</p>
+                <div key={s.n} className="flex min-w-0 flex-col justify-center rounded-2xl bg-white/8 px-3 py-2">
+                  <p className="font-[family-name:var(--font-display)] text-xl leading-none font-semibold text-accent xl:text-2xl">{s.n}</p>
+                  <p className="mt-1 text-[11.5px] leading-snug text-white/85">{s.l}</p>
+                  <p className="mt-0.5 text-[10px] text-white/50">{s.s}</p>
                 </div>
               ))}
             </div>
@@ -432,22 +432,22 @@ export function EvaluationPage() {
         {/* about */}
         <Card className="flex flex-col overflow-hidden lg:col-span-3">
           <Eyebrow>What is HelpMe</Eyebrow>
-          <p className="text-[14px] leading-relaxed text-text-muted xl:text-[15px] [@media(max-height:920px)]:text-[12.5px] [@media(max-height:920px)]:leading-snug">
+          <p className="text-[14px] leading-relaxed text-text-muted xl:text-[15px]">
             A <b className="text-text">voice-first emergency agent</b> for India. Say one sentence in{' '}
             <b className="text-text">Hindi, English or Hinglish</b>: it finds care, dispatches help and talks back.
           </p>
-          <p className="mt-2 rounded-xl bg-accent-soft px-3 py-2 text-[12.5px] font-semibold text-text [@media(max-height:920px)]:mt-1.5 [@media(max-height:920px)]:py-1.5 [@media(max-height:920px)]:text-[11.5px]">
+          <p className="mt-2 rounded-xl bg-accent-soft px-3 py-2 text-[12.5px] font-semibold text-text">
             No typing · no reading · no confirmation loops
           </p>
-          <ul className="mt-3 flex min-h-0 flex-1 flex-col gap-2 [@media(max-height:920px)]:mt-2 [@media(max-height:920px)]:gap-1.5">
+          <ul className="mt-3 flex min-h-0 flex-1 flex-col gap-2">
             {ABOUT.map((a) => (
               <li key={a.t} className="flex min-h-0 flex-1 items-center gap-3 rounded-2xl border border-border bg-surface-low px-3 py-2">
-                <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-primary-soft text-primary [@media(max-height:920px)]:size-7">
+                <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-primary-soft text-primary">
                   <a.icon className="size-[18px]" />
                 </span>
                 <span className="leading-snug">
-                  <b className="block text-[14px] text-text [@media(max-height:920px)]:text-[12.5px]">{a.t}</b>
-                  <span className="block text-[12.5px] text-text-secondary [@media(max-height:920px)]:text-[11px] [@media(max-height:920px)]:leading-tight">{a.d}</span>
+                  <b className="block text-[14px] text-text">{a.t}</b>
+                  <span className="block text-[12.5px] text-text-secondary">{a.d}</span>
                 </span>
               </li>
             ))}
@@ -479,7 +479,7 @@ export function EvaluationPage() {
             <p className="mt-3 rounded-xl bg-primary-dark px-3 py-2 text-center text-[13.5px] font-bold text-accent">
               Every voice request = 1 Prisma call + 1 Timbre call
             </p>
-            <ul className="mt-3 grid grid-cols-2 gap-x-3 gap-y-1.5 [@media(max-height:920px)]:hidden">
+            <ul className="mt-3 grid grid-cols-2 gap-x-3 gap-y-1.5">
               {GNANI_USES.map((u) => (
                 <li key={u} className="flex gap-1.5 text-[12.5px] leading-snug text-text-muted">
                   <span className="mt-1 size-1.5 shrink-0 rounded-full bg-accent" /> {u}
@@ -498,21 +498,21 @@ export function EvaluationPage() {
 
           <Card className="flex flex-1 flex-col">
             <Eyebrow>Workflows · tap to open</Eyebrow>
-            <div className="flex min-h-0 flex-1 flex-col justify-between gap-2 [@media(max-height:920px)]:grid [@media(max-height:920px)]:grid-cols-2 [@media(max-height:920px)]:content-start [@media(max-height:920px)]:gap-2">
+            <div className="flex min-h-0 flex-1 flex-col justify-between gap-2">
               {DIAGRAMS.map((d) => (
                 <button
                   key={d.id}
                   onClick={() => setOpen(d)}
-                  className="group flex h-11 min-w-0 shrink-0 items-center gap-2.5 rounded-xl border border-border bg-surface-low pr-2.5 pl-1.5 text-left transition hover:-translate-y-0.5 hover:border-accent hover:bg-accent-soft [@media(max-height:920px)]:h-9 [@media(max-height:920px)]:gap-2 [@media(max-height:920px)]:pl-1"
+                  className="group flex h-11 min-w-0 shrink-0 items-center gap-2.5 rounded-xl border border-border bg-surface-low pr-2.5 pl-1.5 text-left transition hover:-translate-y-0.5 hover:border-accent hover:bg-accent-soft"
                 >
-                  <span className="grid size-8 shrink-0 place-items-center rounded-lg bg-primary text-accent [@media(max-height:920px)]:size-7">
+                  <span className="grid size-8 shrink-0 place-items-center rounded-lg bg-primary text-accent">
                     <d.icon className="size-4" />
                   </span>
                   <span className="min-w-0 flex-1">
-                    <b className="block truncate text-[13px] leading-tight font-semibold text-text [@media(max-height:920px)]:text-[12px]">{d.title}</b>
-                    <span className="block truncate text-[11px] leading-tight text-text-secondary [@media(max-height:920px)]:hidden">{d.sub}</span>
+                    <b className="block truncate text-[13px] leading-tight font-semibold text-text">{d.title}</b>
+                    <span className="block truncate text-[11px] leading-tight text-text-secondary">{d.sub}</span>
                   </span>
-                  <ArrowRight className="size-4 shrink-0 text-outline transition group-hover:translate-x-0.5 group-hover:text-accent-dark [@media(max-height:920px)]:hidden" />
+                  <ArrowRight className="size-4 shrink-0 text-outline transition group-hover:translate-x-0.5 group-hover:text-accent-dark" />
                 </button>
               ))}
             </div>
@@ -531,7 +531,7 @@ export function EvaluationPage() {
           <span className="ml-auto text-[12px] text-text-secondary">
             Built by <b className="text-text">Vansh Singla</b> · vs.vansh19@gmail.com
           </span>
-          <span className="flex items-center gap-3 text-[11px] text-text-secondary [@media(max-height:920px)]:hidden">
+          <span className="flex items-center gap-3 text-[11px] text-text-secondary">
             <span className="flex items-center gap-1">
               <Users className="size-3.5" /> Donors, ambulances & WhatsApp are demo simulations
             </span>
