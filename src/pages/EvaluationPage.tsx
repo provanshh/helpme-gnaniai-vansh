@@ -355,91 +355,80 @@ export function EvaluationPage() {
 
       {/* ── body grid */}
       <main className="grid min-h-0 flex-1 gap-3 lg:grid-cols-12 lg:grid-rows-[minmax(0,1fr)_auto] xl:gap-4">
-        {/* video */}
-        <Card className="flex flex-col lg:col-span-5">
-          <Eyebrow>Demo video</Eyebrow>
-          <div className="relative aspect-video w-full shrink overflow-hidden rounded-2xl bg-primary-dark">
-            {embed ? (
-              <iframe
-                className="absolute inset-0 size-full"
-                src={embed}
-                title="HelpMe demo video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            ) : (
-              <div className="absolute inset-0 grid place-items-center bg-[radial-gradient(circle_at_30%_20%,#3b5e45,#1f3626)] text-center text-white">
-                <div>
-                  <CirclePlay className="mx-auto size-16 text-accent" />
-                  <p className="mt-3 font-display text-lg font-bold">3-minute explainer</p>
-                  <p className="text-[13px] text-white/70">Video link coming soon</p>
+        {/* video + impact */}
+        <div className="flex min-h-0 flex-col gap-3 lg:col-span-5 xl:gap-4">
+          <Card className="shrink-0">
+            <div className="mb-2 flex items-center justify-between">
+              <Eyebrow>Demo video · 3 min</Eyebrow>
+              {DEMO_VIDEO_URL && (
+                <a
+                  href={DEMO_VIDEO_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mb-2 flex items-center gap-1 text-[12px] font-semibold text-primary hover:underline"
+                >
+                  Watch on YouTube <ExternalLink className="size-3" />
+                </a>
+              )}
+            </div>
+            <div className="relative aspect-video w-full overflow-hidden rounded-2xl bg-primary-dark">
+              {embed ? (
+                <iframe
+                  className="absolute inset-0 size-full"
+                  src={embed}
+                  title="HelpMe demo video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              ) : (
+                <div className="absolute inset-0 grid place-items-center bg-[radial-gradient(circle_at_30%_20%,#3b5e45,#1f3626)] text-center text-white">
+                  <div>
+                    <CirclePlay className="mx-auto size-14 text-accent" />
+                    <p className="mt-2 font-display text-lg font-bold">3-minute explainer</p>
+                    <p className="text-[13px] text-white/70">Video link coming soon</p>
+                  </div>
                 </div>
-              </div>
-            )}
-          </div>
-          {DEMO_VIDEO_URL && (
-            <a
-              href={DEMO_VIDEO_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="mt-2 flex items-center gap-1 self-start text-[12px] font-semibold text-primary hover:underline"
-            >
-              Watch on YouTube <ExternalLink className="size-3" />
-            </a>
-          )}
-          <a
-            href={GITHUB_URL}
-            target="_blank"
-            rel="noreferrer"
-            className="group mt-3 flex min-h-0 flex-1 items-center gap-3 rounded-2xl bg-primary-dark px-4 py-3 text-white transition hover:bg-primary"
-          >
-            <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-white text-primary-dark">
-              <GithubMark />
-            </span>
-            <span className="min-w-0 flex-1">
-              <b className="block text-[11px] font-bold tracking-[0.14em] text-accent uppercase">Source code</b>
-              <span className="block truncate font-display text-[15px] font-bold">github.com/provanshh/helpme-gnaniai-vansh</span>
-              <span className="block truncate font-mono text-[11px] text-white/60 [@media(max-height:820px)]:hidden">npm i · npm run dev:server · npm run dev</span>
-            </span>
-            <ExternalLink className="size-4 text-white/60 group-hover:text-accent" />
-          </a>
-        </Card>
-
-        {/* about + impact */}
-        <div className="flex min-h-0 flex-col gap-3 lg:col-span-3 xl:gap-4">
-          <Card className="flex-1 overflow-hidden">
-            <Eyebrow>What is HelpMe</Eyebrow>
-            <p className="mb-3 text-[13px] leading-snug text-text-muted xl:text-sm [@media(max-height:820px)]:mb-2 [@media(max-height:820px)]:text-[12px]">
-              A voice-first emergency agent. Say one sentence in <b>Hindi, English or Hinglish</b>: it finds care,
-              dispatches help and talks back. <b>No typing, no reading, no confirmation loops.</b>
-            </p>
-            <ul className="grid gap-2 [@media(max-height:820px)]:grid-cols-2 [@media(max-height:820px)]:gap-1.5">
-              {ABOUT.map((a) => (
-                <li key={a.t} className="flex items-start gap-2.5">
-                  <span className="grid size-8 shrink-0 place-items-center rounded-xl bg-primary-soft text-primary [@media(max-height:820px)]:size-7">
-                    <a.icon className="size-4" />
-                  </span>
-                  <span className="text-[12.5px] leading-tight">
-                    <b className="block text-text">{a.t}</b>
-                    <span className="text-text-secondary [@media(max-height:820px)]:hidden">{a.d}</span>
-                  </span>
-                </li>
-              ))}
-            </ul>
+              )}
+            </div>
           </Card>
-          <Card className="shrink-0 !bg-primary-dark text-white">
+          <Card className="flex flex-1 flex-col !bg-primary-dark text-white">
             <Eyebrow light>Impact: why it matters</Eyebrow>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid min-h-0 flex-1 grid-cols-2 gap-2.5 [@media(max-height:820px)]:grid-cols-4 [@media(max-height:820px)]:gap-2">
               {IMPACT.map((s) => (
-                <div key={s.n} className="rounded-2xl bg-white/8 p-2.5">
-                  <p className="font-display text-xl font-bold text-accent xl:text-2xl">{s.n}</p>
-                  <p className="text-[11px] leading-tight text-white/85">{s.l}</p>
-                  <p className="mt-0.5 text-[9.5px] text-white/50">{s.s}</p>
+                <div key={s.n} className="flex flex-col justify-center rounded-2xl bg-white/8 px-3.5 py-2.5 [@media(max-height:820px)]:px-2.5">
+                  <p className="font-display text-2xl leading-none font-bold text-accent xl:text-[28px] [@media(max-height:820px)]:text-xl">{s.n}</p>
+                  <p className="mt-1.5 text-[12.5px] leading-snug text-white/90 [@media(max-height:820px)]:text-[11px]">{s.l}</p>
+                  <p className="mt-1 text-[10.5px] text-white/50 [@media(max-height:820px)]:hidden">{s.s}</p>
                 </div>
               ))}
             </div>
           </Card>
         </div>
+
+        {/* about */}
+        <Card className="flex flex-col overflow-hidden lg:col-span-3">
+          <Eyebrow>What is HelpMe</Eyebrow>
+          <p className="text-[14px] leading-relaxed text-text-muted xl:text-[15px] [@media(max-height:820px)]:text-[12.5px] [@media(max-height:820px)]:leading-snug">
+            A <b className="text-text">voice-first emergency agent</b> for India. Say one sentence in{' '}
+            <b className="text-text">Hindi, English or Hinglish</b>: it finds care, dispatches help and talks back.
+          </p>
+          <p className="mt-2 rounded-xl bg-accent-soft px-3 py-2 text-[12.5px] font-semibold text-text [@media(max-height:820px)]:mt-1.5 [@media(max-height:820px)]:py-1.5 [@media(max-height:820px)]:text-[11.5px]">
+            No typing · no reading · no confirmation loops
+          </p>
+          <ul className="mt-3 flex min-h-0 flex-1 flex-col gap-2 [@media(max-height:820px)]:mt-2 [@media(max-height:820px)]:gap-1.5">
+            {ABOUT.map((a) => (
+              <li key={a.t} className="flex min-h-0 flex-1 items-center gap-3 rounded-2xl border border-border bg-surface-low px-3 py-2">
+                <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-primary-soft text-primary [@media(max-height:820px)]:size-7">
+                  <a.icon className="size-[18px]" />
+                </span>
+                <span className="leading-snug">
+                  <b className="block text-[14px] text-text [@media(max-height:820px)]:text-[12.5px]">{a.t}</b>
+                  <span className="block text-[12.5px] text-text-secondary [@media(max-height:820px)]:text-[11px] [@media(max-height:820px)]:leading-tight">{a.d}</span>
+                </span>
+              </li>
+            ))}
+          </ul>
+        </Card>
 
         {/* gnani + workflows */}
         <div className="flex min-h-0 flex-col gap-3 lg:col-span-4 xl:gap-4">
@@ -456,19 +445,19 @@ export function EvaluationPage() {
                     className={`flex h-full flex-1 flex-col rounded-2xl p-2.5 ${s.g ? 'bg-primary text-white ring-2 ring-accent' : 'bg-accent-soft text-text'}`}
                   >
                     <s.icon className={`size-5 ${s.g ? 'text-accent' : 'text-accent-dark'}`} />
-                    <p className="mt-1 font-display text-[13px] font-bold">{s.g ? `Gnani ${s.t}` : s.t}</p>
-                    <p className={`text-[10.5px] leading-tight ${s.g ? 'text-white/75' : 'text-text-secondary'}`}>{s.d}</p>
+                    <p className="mt-1 font-display text-[14px] leading-tight font-bold">{s.g ? `Gnani ${s.t}` : s.t}</p>
+                    <p className={`mt-0.5 text-[11.5px] leading-snug ${s.g ? 'text-white/75' : 'text-text-secondary'}`}>{s.d}</p>
                   </div>
                   {i < 2 && <ArrowRight className="size-4 shrink-0 text-outline" />}
                 </div>
               ))}
             </div>
-            <p className="mt-2.5 rounded-xl bg-primary-dark px-3 py-2 text-center text-[12.5px] font-bold text-accent">
+            <p className="mt-3 rounded-xl bg-primary-dark px-3 py-2 text-center text-[13.5px] font-bold text-accent">
               Every voice request = 1 Prisma call + 1 Timbre call
             </p>
-            <ul className="mt-2.5 grid grid-cols-2 gap-x-3 gap-y-1 [@media(max-height:820px)]:hidden">
+            <ul className="mt-3 grid grid-cols-2 gap-x-3 gap-y-1.5 [@media(max-height:820px)]:hidden">
               {GNANI_USES.map((u) => (
-                <li key={u} className="flex gap-1.5 text-[11.5px] leading-tight text-text-muted">
+                <li key={u} className="flex gap-1.5 text-[12.5px] leading-snug text-text-muted">
                   <span className="mt-1 size-1.5 shrink-0 rounded-full bg-accent" /> {u}
                 </li>
               ))}
@@ -496,8 +485,8 @@ export function EvaluationPage() {
                     <d.icon className="size-4" />
                   </span>
                   <span className="min-w-0 flex-1">
-                    <b className="line-clamp-2 block text-[13px] leading-tight text-text [@media(max-height:820px)]:text-[12px]">{d.title}</b>
-                    <span className="block truncate text-[11px] text-text-secondary [@media(max-height:820px)]:hidden">{d.sub}</span>
+                    <b className="line-clamp-2 block text-[14px] leading-tight text-text [@media(max-height:820px)]:text-[12px]">{d.title}</b>
+                    <span className="block truncate text-[12px] text-text-secondary [@media(max-height:820px)]:hidden">{d.sub}</span>
                   </span>
                   <ArrowRight className="size-4 shrink-0 text-outline transition group-hover:translate-x-0.5 group-hover:text-accent-dark [@media(max-height:820px)]:hidden" />
                 </button>
@@ -517,7 +506,7 @@ export function EvaluationPage() {
               {s}
             </span>
           ))}
-          <span className="ml-auto flex items-center gap-3 text-[11px] text-text-secondary">
+          <span className="ml-auto flex items-center gap-3 text-[11px] text-text-secondary [@media(max-height:820px)]:hidden">
             <span className="flex items-center gap-1">
               <Users className="size-3.5" /> Donors, ambulances & WhatsApp are demo simulations
             </span>
